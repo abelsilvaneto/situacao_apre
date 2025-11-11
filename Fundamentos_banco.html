@@ -1,0 +1,349 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="chess_queen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" type="image/png">
+    <title>Fundamentos de Bancos de Dados</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="./index.html" class="nav-link">Home</a>
+            <a href="./Logica_Computacional.html" class="nav-link">Lógica<br>Computacional</a>
+            <a href="./logica_programa.html" class="nav-link">Lógica<br>programação</a>
+            <a href="./funda_eletro.html" class="nav-link">Fundamentos da<br>Eletroeletrônica</a>
+            <a href="./Fundamentos_Redes.html" class="nav-link">Fundamentos da<br>Fundamentos de Redes</a>
+            <a href="./Fundamentos_tecnologia.html" class="nav-link">Fundamentos da<br>Tecnologia da Informação</a>
+        </div>
+    </nav>
+
+    <div class="hero"><br>
+        
+        <br><h1 class="main-title">Fundamentos de<br>Bancos de Dados</h1>
+    </div>
+
+    <div class="content-section">
+        <h2 class="section-title">Componentes Eletrônicos<br>empregados em serviços</h2>
+
+        <div class="components-grid">
+            <!-- Resistor e LED -->
+            <div class="component-card">
+                <h3 class="component-title">Resistor</h3>
+                <div class="component-content">
+                    <div class="info-box">
+                        <p><strong>Função:</strong> Limita ou controla a passagem de corrente elétrica em um circuito.</p>
+                        <p><strong>Uso comum:</strong> Proteger componentes sensíveis (como LEDs) e ajustar tensões.</p>
+                        <p><strong>Exemplo prático:</strong> Em um circuito com LED, o resistor evita que o LED queime por excesso de corrente.</p>
+                    </div>
+                    <div class="symbol-area">
+                        <h4 class="symbol-title">Simbologia</h4>
+                        <img src="./media/resistor_sim.png" alt="Símbolo do resistor" class="resistor-symbol">
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-card">
+                <h3 class="component-title">diodo LED</h3>
+                <div class="component-content">
+                    <div class="symbol-area">
+                        <h4 class="symbol-title">Simbologia</h4>
+                        <img src="./media/led_sim.png" alt="Símbolo do LED" class="led-symbol">
+                    </div>
+                    <div class="info-box">
+                        <p><strong>Função:</strong> Emite luz quando a corrente elétrica passa por ele em um único sentido.</p>
+                        <p><strong>Características:</strong> Possui polaridade (lado positivo — ânodo / lado negativo — catodo).</p>
+                        <p><strong>Uso comum:</strong> Indicadores luminosos em painéis, eletrônicos e iluminação.</p>
+                        <p><strong>Exemplo prático:</strong> Luz de "ligado/desligado" em aparelhos eletrônicos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transistor e Circuito Integrado -->
+            <div class="component-card">
+                <h3 class="component-title">Transistor</h3>
+                <div class="component-content">
+                    <div class="info-box">
+                        <p><strong>Função:</strong> Atua como chave eletrônica (liga/desliga) ou amplificador de sinal.</p>
+                        <p><strong>Tipos principais:</strong> NPN e PNP (bipolares), MOSFET (de efeito de campo).</p>
+                        <p><strong>Uso comum:</strong> Em circuitos de amplificação de som, fontes de energia e microcontroladores.</p>
+                        <p><strong>Exemplo prático:</strong> Controle da velocidade de motores ou volume de áudio.</p>
+                    </div>
+                    <div class="symbol-area">
+                        <h4 class="symbol-title">Simbologia</h4>
+                        <img src="./media/trans_sim.png" alt="Símbolo do Transistor" class="transistor-symbol">
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-card">
+                <h3 class="component-title">Circuito Integrado</h3>
+                <div class="component-content">
+                    <div class="symbol-area">
+                        <h4 class="symbol-title">Simbologia</h4>
+                        
+                         <img src="./media/555-removebg-preview.png" alt="Símbolo do Circuito Integrado" class="ic-symbol">
+
+                    </div>
+                    <div class="info-box">
+                        <p><strong>Função:</strong> Reúne vários componentes eletrônicos (transistores, resistores, capacitores) em um único chip.</p>
+                        <p><strong>Vantagem:</strong> Diminui o tamanho dos circuitos e aumenta a eficiência.</p>
+                        <p><strong>Uso comum:</strong> Em computadores, celulares, fontes chaveadas e microcontroladores (como o Arduino).</p>
+                        <p><strong>Exemplo prático:</strong> O CI 555 é usado como temporizador; o CI 7400 em circuitos lógicos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero internal">
+        <h1 class="main-title">Arduino</h1>
+    </div>
+
+    <div class="content-section">
+        <div class="arduino-grid">
+            <!-- O que é? -->
+            <div class="arduino-card">
+                <h2 class="arduino-section-title">O que é?</h2>
+                <div class="arduino-content-wrapper">
+                    <div class="arduino-info-box">
+                        <p>O Arduino é uma plataforma de prototipagem eletrônica de código aberto (open source), formada por uma placa com microcontrolador e um software (Arduino IDE) usado para programá-la.</p>
+                        <p>Ele permite criar e testar projetos eletrônicos de forma simples, mesmo para iniciantes.</p>
+                    </div>
+                    <div class="arduino-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Arduino_Uno_-_R3.jpg/400px-Arduino_Uno_-_R3.jpg" alt="Arduino Uno" class="arduino-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Para que serve/aplicações -->
+            <div class="arduino-card">
+                <h2 class="arduino-section-title">Para que serve/<br>aplicações</h2>
+                <div class="arduino-applications">
+                    <div class="arduino-info-box">
+                        <p class="intro-text">O Arduino serve para controlar dispositivos eletrônicos automaticamente, lendo informações do ambiente (sensores) e reagindo a elas (atuadores).</p>
+                        <p class="apps-title">Algumas aplicações comuns:</p>
+                        <ul class="applications-list">
+                            <li><span class="emoji">🌡️</span> Estações meteorológicas (temperatura, umidade, chuva)</li>
+                            <li><span class="emoji">🤖</span> Robôs e carrinhos autônomos</li>
+                            <li><span class="emoji">💡</span> Automação residencial (controle de luzes, portões, irrigação)</li>
+                            <li><span class="emoji">🎓</span> Projetos educacionais de eletrônica e programação</li>
+                            <li><span class="emoji">🚨</span> Alarmes e sistemas de segurança</li>
+                            <li><span class="emoji">🚗</span> Protótipos automotivos (controle de motores, sensores de distância)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vantagens e Desvantagens -->
+        <div class="advantages-section">
+            <div class="adv-disadv-grid">
+                <div class="adv-card">
+                    <h2 class="adv-title">Vantagens</h2>
+                    <div class="adv-box">
+                        <ul class="adv-list">
+                            <li><span class="emoji">💻</span> Fácil de programar com linguagem simples baseada em C/C++</li>
+                            <li><span class="emoji">📍</span> Grande variedade de sensores e módulos compatíveis</li>
+                            <li><span class="emoji">👥</span> Comunidade ativa e tutoriais disponíveis</li>
+                            <li><span class="emoji">💰</span> Baixo custo e acessível para estudantes</li>
+                            <li><span class="emoji">🔧</span> Open source, ou seja, livre para modificar e compartilhar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="adv-card">
+                    <h2 class="adv-title">Desvantagens</h2>
+                    <div class="adv-box">
+                        <ul class="adv-list">
+                            <li><span class="emoji">⚡</span> Baixo poder de processamento (limitado para projetos muito complexos)</li>
+                            <li><span class="emoji">💾</span> Pouca memória comparado a microcontroladores avançados</li>
+                            <li><span class="emoji">🐢</span> Velocidade menor que placas como Raspberry Pi</li>
+                            <li><span class="emoji">📱</span> Dependência de hardware externo para funções específicas (Wi-Fi, Bluetooth, etc.)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Como o Arduino funciona -->
+     <div class="how-it-works-section">
+        <h2 class="section-main-title">Como o Arduino funciona?</h2>
+        <div class="intro-text-box">
+            <p>O Arduino funciona como o "cérebro" de um projeto eletrônico.</p>
+            <p>Ele recebe informações do ambiente, processa esses dados e controla dispositivos de acordo com o que foi programado.</p>
+        </div>
+
+        <div class="workflow-grid">
+            <div class="workflow-card">
+                <h3 class="workflow-title">1. Entradas (Input)</h3>
+                <div class="workflow-box bordered">
+                    <p class="workflow-intro">São os sensores e dispositivos que enviam informações para o Arduino.</p>
+                    <p class="workflow-label">Exemplos:</p>
+                    <ul class="workflow-list">
+                        <li>Sensor de temperatura 🌡️</li>
+                        <li>Sensor de luz (LDR) 💡</li>
+                        <li>Botão ⚪</li>
+                    </ul>
+                    <p class="workflow-footer">Esses componentes mandam sinais elétricos para os pinos de entrada da placa.</p>
+                </div>
+            </div>
+
+            <div class="workflow-card">
+                <h3 class="workflow-title">2. Processamento</h3>
+                <div class="workflow-box">
+                    <p>O microcontrolador (geralmente um ATmega328 no Arduino Uno) interpreta o programa que você gravou nele usando a IDE Arduino.</p>
+                    <p>Ele decide o que fazer com os dados recebidos — por exemplo: "Se o sensor de luz detectar escuridão, acenda o LED."</p>
+                </div>
+            </div>
+
+            <div class="workflow-card">
+                <h3 class="workflow-title">3. Saídas (Output)</h3>
+                <div class="workflow-box">
+                    <p>Depois de processar as informações, o Arduino envia comandos para os dispositivos de saída.</p>
+                    <p class="workflow-label">Exemplos:</p>
+                    <ul class="workflow-list">
+                        <li>Acender um LED 💡</li>
+                        <li>Ligar um motor 🔌</li>
+                        <li>Tocar um som 🔊</li>
+                        <li>Enviar dados para um display 🖥️</li>
+                    </ul>
+                    <p class="workflow-footer">Essas ações acontecem nos pinos de saída digital ou analógica da placa.</p>
+                </div>
+            </div>
+
+            <div class="workflow-card">
+                <h3 class="workflow-title">4. Programação</h3>
+                <div class="workflow-box">
+                    <p>O comportamento do Arduino é definido por um programa (sketch) escrito na Arduino IDE, em linguagem baseada em C/C++.</p>
+                    <p>Depois que o código é compilado e enviado para a placa via cabo USB, ele fica gravado no microcontrolador e é executado automaticamente.</p>
+                </div>
+            </div>
+
+            <div class="workflow-card">
+                <h3 class="workflow-title">5. Alimentação</h3>
+                <div class="workflow-box">
+                    <p class="workflow-intro">O Arduino pode ser ligado por:</p>
+                    <ul class="workflow-list">
+                        <li>Cabo USB 🔌</li>
+                        <li>Bateria 🔋</li>
+                        <li>Fonte externa ⚡</li>
+                    </ul>
+                    <p class="workflow-footer">Ele converte a energia para alimentar tanto o próprio circuito quanto os sensores e atuadores conectados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- O que é eletrônica embarcada -->
+    <div class="embedded-section">
+        <h2 class="section-main-title">O que é eletrônica embarcada?</h2>
+        
+        <div class="embedded-definition">
+            <div class="definition-box">
+                <p>A eletrônica embarcada é o conjunto de componentes eletrônicos e sistemas de controle que são instalados dentro de máquinas, veículos, aparelhos ou equipamentos, para realizar funções automáticas específicas.</p>
+                <p>Em outras palavras, é a eletrônica "escondida" dentro dos dispositivos que usamos no dia a dia, fazendo tudo funcionar sem precisarmos perceber.</p>
+            </div>
+        </div>
+
+        <div class="embedded-content-grid">
+            <div class="embedded-card">
+                <h3 class="embedded-subtitle">Como funciona</h3>
+                <div class="embedded-box">
+                    <p class="embedded-intro">Um sistema embarcado combina:</p>
+                    <ol class="embedded-ordered-list">
+                        <li><strong>Hardware</strong> — sensores, atuadores, microcontroladores (como o Arduino).</li>
+                        <li><strong>Software</strong> — programas que controlam o funcionamento do sistema.</li>
+                    </ol>
+                    <p class="embedded-footer">Esses dois elementos trabalham juntos para monitorar, processar e controlar alguma função específica.</p>
+                </div>
+            </div>
+
+            <div class="embedded-card">
+                <h3 class="embedded-subtitle">Exemplos de Eletrônica Embarcada</h3>
+                <div class="embedded-box">
+                    <ul class="embedded-examples-list">
+                        <li><strong>Carros:</strong> controle de injeção eletrônica, freios ABS, airbags, sensores de estacionamento.</li>
+                        <li><strong>Celulares:</strong> controle de tela, câmera, bateria e sensores de movimento.</li>
+                        <li><strong>Eletrodomésticos inteligentes:</strong> micro-ondas, máquinas de lavar, geladeiras automatizadas.</li>
+                        <li><strong>Aviões e drones:</strong> sistemas de navegação e estabilidade.</li>
+                        <li><strong>Máquinas industriais:</strong> controle de motores, temperatura e processos automáticos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="embedded-card full-width">
+                <div class="embedded-advantages-grid">
+                    <div class="embedded-adv-card">
+                        <h3 class="embedded-subtitle centered">Vantagens</h3>
+                        <div class="embedded-box compact">
+                            <ul class="simple-list">
+                                <li>Automação e precisão nos sistemas</li>
+                                <li>Economia de energia</li>
+                                <li>Maior segurança e confiabilidade</li>
+                                <li>Facilidade de manutenção e monitoramento</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="embedded-adv-card">
+                        <h3 class="embedded-subtitle centered">Desvantagens</h3>
+                        <div class="embedded-box compact">
+                            <ul class="simple-list">
+                                <li>Difícil de modificar (projetos muito específicos)</li>
+                                <li>Custo maior em equipamentos simples</li>
+                                <li>Necessidade de técnicos especializados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linguagem de Programação -->
+    <div class="content-section">
+        <h2 class="section-main-title">Linguagem de Programação usada no Arduino</h2>
+        
+        <div class="programming-content">
+            <div class="programming-text-box">
+                <p>O Arduino é programado em uma linguagem baseada em C e C++, dentro do software Arduino IDE.</p>
+                <p><strong>Simples e fácil de entender.</strong></p>
+                <p>Usa funções próprias, como setup() (configuração) e loop() (repetição).</p>
+            </div>
+
+            <div class="code-example-container">
+                <pre class="code-block"><code><span class="code-keyword">void</span> <span class="code-function">setup</span>() {
+<span class="code-function">pinMode</span>(<span class="code-number">13</span>, <span class="code-constant">OUTPUT</span>); <span class="code-comment">// Define o pino 13 como saída</span>
+}
+
+<span class="code-keyword">void</span> <span class="code-function">loop</span>() {
+<span class="code-function">digitalWrite</span>(<span class="code-number">13</span>, <span class="code-constant">HIGH</span>); <span class="code-comment">// Liga o LED</span>
+<span class="code-function">delay</span>(<span class="code-number">1000</span>);            <span class="code-comment">// Espera 1 segundo</span>
+<span class="code-function">digitalWrite</span>(<span class="code-number">13</span>, <span class="code-constant">LOW</span>);  <span class="code-comment">// Desliga o LED</span>
+<span class="code-function">delay</span>(<span class="code-number">1000</span>);            <span class="code-comment">// Espera 1 segundo</span>
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer>
+    <div>
+      <p><strong>FEITO POR:</strong><br>ABEL SILVA NETO</p>
+    </div>
+
+    <div>
+      <p><strong>COLABORAÇÃO COM</strong><br>SESI/SENAI</p>
+    </div>
+
+    <div>
+      <p><strong>CONTATOS:</strong><br>
+      <a href="mailto:abel_silva-neto@estudante.esisenai.org.br">
+        abel_silva-neto@estudante.sesisenai.org.br
+      </a></p>
+    </div>
+  </footer>
+</body>
+</html>
