@@ -25,175 +25,228 @@
     </div>
 
     <div class="content-section">
-        <h2 class="section-title">Componentes Eletrônicos<br>empregados em serviços</h2>
+        <h2 class="section-title">O que é um SGBD?<br>Tipos e Aplicações?</h2>
 
         <div class="components-grid">
             <!-- Resistor e LED -->
             <div class="component-card">
-                <h3 class="component-title">Resistor</h3>
-                <div class="component-content">
-                    <div class="info-box">
-                        <p><strong>Função:</strong> Limita ou controla a passagem de corrente elétrica em um circuito.</p>
-                        <p><strong>Uso comum:</strong> Proteger componentes sensíveis (como LEDs) e ajustar tensões.</p>
-                        <p><strong>Exemplo prático:</strong> Em um circuito com LED, o resistor evita que o LED queime por excesso de corrente.</p>
+                <h3 class="component-title">o que é?</h3>
+                <div class="arduino-applications">
+                    <div class="arduino-info-box">
+                        <p>Um SGBD (Sistema de Gerenciamento de Banco de Dados) é um software responsável por criar, gerenciar e manipular bancos de dados, permitindo que usuários e aplicações armazenem, consultem, modifiquem e organizem grandes volumes de informações de forma segura e eficiente. Ele atua como uma ponte entre o usuário (ou o programa) e os dados, garantindo integridade, segurança e fácil acesso às informações.</p>
+                        <p>Sem um SGBD, seria necessário lidar diretamente com os arquivos de dados, o que tornaria o processo mais lento, inseguro e sujeito a erros.</p>
+                        <p class="intro-text">Tipos de SGBD</p>
+                        <ul  class="applications-list">
+                            <li>SGBD Relacional (RDBMS):
+Armazena os dados em tabelas (linhas e colunas) que se relacionam entre si.
+ Exemplos: MySQL, PostgreSQL, Oracle, SQL Server.</li>
+<li>SGBD Não Relacional (NoSQL):
+Usa formatos mais flexíveis, como documentos, grafos ou pares chave-valor, em vez de tabelas.
+ Exemplos: MongoDB (documentos), Redis (chave-valor), Neo4j (grafos).
+</li>
+<li>SGBD Hierárquico:
+Organiza os dados em uma estrutura de árvore, onde cada registro tem um único “pai”.
+Exemplo: IBM IMS.
+</li>
+<li>SGBD de Rede:
+Semelhante ao hierárquico, mas um registro pode ter múltiplos relacionamentos, permitindo uma estrutura mais complexa.
+Exemplo: IDMS.
+</li>
+<li>SGBD Orientado a Objetos:
+Armazena dados como objetos, parecidos com os usados em linguagens de programação orientadas a objetos.
+Exemplo: ObjectDB.
+</li>
+</ul>
+ <p class="intro-text">e Aplicações de SGBD</p>
+                        <ul  class="applications-list">
+                            <li><strong>Aplicações Comuns de SGBDs:</strong></li>
+                            <li>Empresas: Controle de estoque, finanças, recursos humanos e vendas.</li>
+                            <li>Bancos: Gerenciamento de contas, transações e clientes.</li>
+                            <li>Hospitais: Cadastro de pacientes, prontuários e agendamentos.</li>
+                            <li>Escolas e universidades: Registro de alunos, notas e disciplinas.</li>
+                            <li>E-commerce: Controle de produtos, pedidos e usuários.</li>
+                        </ul>
                     </div>
-                    <div class="symbol-area">
-                        <h4 class="symbol-title">Simbologia</h4>
-                        <img src="./media/resistor_sim.png" alt="Símbolo do resistor" class="resistor-symbol">
-                    </div>
+
                 </div>
             </div>
 
-            <div class="component-card">
-                <h3 class="component-title">diodo LED</h3>
-                <div class="component-content">
-                    <div class="symbol-area">
-                        <h4 class="symbol-title">Simbologia</h4>
-                        <img src="./media/led_sim.png" alt="Símbolo do LED" class="led-symbol">
-                    </div>
-                    <div class="info-box">
-                        <p><strong>Função:</strong> Emite luz quando a corrente elétrica passa por ele em um único sentido.</p>
-                        <p><strong>Características:</strong> Possui polaridade (lado positivo — ânodo / lado negativo — catodo).</p>
-                        <p><strong>Uso comum:</strong> Indicadores luminosos em painéis, eletrônicos e iluminação.</p>
-                        <p><strong>Exemplo prático:</strong> Luz de "ligado/desligado" em aparelhos eletrônicos.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Transistor e Circuito Integrado -->
-            <div class="component-card">
-                <h3 class="component-title">Transistor</h3>
-                <div class="component-content">
-                    <div class="info-box">
-                        <p><strong>Função:</strong> Atua como chave eletrônica (liga/desliga) ou amplificador de sinal.</p>
-                        <p><strong>Tipos principais:</strong> NPN e PNP (bipolares), MOSFET (de efeito de campo).</p>
-                        <p><strong>Uso comum:</strong> Em circuitos de amplificação de som, fontes de energia e microcontroladores.</p>
-                        <p><strong>Exemplo prático:</strong> Controle da velocidade de motores ou volume de áudio.</p>
-                    </div>
-                    <div class="symbol-area">
-                        <h4 class="symbol-title">Simbologia</h4>
-                        <img src="./media/trans_sim.png" alt="Símbolo do Transistor" class="transistor-symbol">
-                    </div>
-                </div>
-            </div>
-
-            <div class="component-card">
-                <h3 class="component-title">Circuito Integrado</h3>
-                <div class="component-content">
-                    <div class="symbol-area">
-                        <h4 class="symbol-title">Simbologia</h4>
-                        
-                         <img src="./media/555-removebg-preview.png" alt="Símbolo do Circuito Integrado" class="ic-symbol">
-
-                    </div>
-                    <div class="info-box">
-                        <p><strong>Função:</strong> Reúne vários componentes eletrônicos (transistores, resistores, capacitores) em um único chip.</p>
-                        <p><strong>Vantagem:</strong> Diminui o tamanho dos circuitos e aumenta a eficiência.</p>
-                        <p><strong>Uso comum:</strong> Em computadores, celulares, fontes chaveadas e microcontroladores (como o Arduino).</p>
-                        <p><strong>Exemplo prático:</strong> O CI 555 é usado como temporizador; o CI 7400 em circuitos lógicos.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
+
     <div class="hero internal">
-        <h1 class="main-title">Arduino</h1>
+        <h1 class="main-title">Quais os principais bancos de dados?</h1>
     </div>
+
+
+        <div class="content-section">
+        <div class="arduino-grid">
+            <!-- O que é? -->
+            <div class="arduino-card">
+                <h2 class="arduino-section-title">O que é?</h2>
+                
+                <div class="arduino-info-box">
+                <p>Os principais bancos de dados são aqueles mais usados no mercado por sua confiabilidade, desempenho e facilidade de integração com diversos sistemas. Eles podem ser relacionais (SQL) ou não relacionais (NoSQL).</p>
+
+                </div>
+            
+        </div>
+    </div>
+        </div>
 
     <div class="content-section">
         <div class="arduino-grid">
             <!-- O que é? -->
             <div class="arduino-card">
-                <h2 class="arduino-section-title">O que é?</h2>
+
                 <div class="arduino-content-wrapper">
+ 
                     <div class="arduino-info-box">
-                        <p>O Arduino é uma plataforma de prototipagem eletrônica de código aberto (open source), formada por uma placa com microcontrolador e um software (Arduino IDE) usado para programá-la.</p>
-                        <p>Ele permite criar e testar projetos eletrônicos de forma simples, mesmo para iniciantes.</p>
-                    </div>
-                    <div class="arduino-image-container">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Arduino_Uno_-_R3.jpg/400px-Arduino_Uno_-_R3.jpg" alt="Arduino Uno" class="arduino-img">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Para que serve/aplicações -->
-            <div class="arduino-card">
-                <h2 class="arduino-section-title">Para que serve/<br>aplicações</h2>
-                <div class="arduino-applications">
-                    <div class="arduino-info-box">
-                        <p class="intro-text">O Arduino serve para controlar dispositivos eletrônicos automaticamente, lendo informações do ambiente (sensores) e reagindo a elas (atuadores).</p>
-                        <p class="apps-title">Algumas aplicações comuns:</p>
-                        <ul class="applications-list">
-                            <li><span class="emoji">🌡️</span> Estações meteorológicas (temperatura, umidade, chuva)</li>
-                            <li><span class="emoji">🤖</span> Robôs e carrinhos autônomos</li>
-                            <li><span class="emoji">💡</span> Automação residencial (controle de luzes, portões, irrigação)</li>
-                            <li><span class="emoji">🎓</span> Projetos educacionais de eletrônica e programação</li>
-                            <li><span class="emoji">🚨</span> Alarmes e sistemas de segurança</li>
-                            <li><span class="emoji">🚗</span> Protótipos automotivos (controle de motores, sensores de distância)</li>
+                        <p>Bancos de Dados Relacionais (SQL)</p>
+                        <p>Esses armazenam dados em tabelas com linhas e colunas, e utilizam a linguagem SQL (Structured Query Language) para consultar e manipular informações.</p>
+                                                <ul  class="applications-list">
+                            <li>MySQL  Um dos mais populares do mundo, gratuito e de código aberto. Muito usado em sites e sistemas web (como WordPress e lojas virtuais).</li>
+                            <li>PostgreSQL  Open source, conhecido por sua robustez, segurança e suporte a dados complexos.</li>
+                            <li>Oracle Database  Amplamente usado em grandes empresas; é pago e oferece alta performance e segurança.</li>
+                            <li>Microsoft SQL Server  Banco de dados da Microsoft, muito utilizado em sistemas corporativos e aplicações Windows.</li>
+                            <li>SQLite  Leve e simples, ideal para aplicativos móveis e pequenos sistemas, pois não precisa de servidor.</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Vantagens e Desvantagens -->
-        <div class="advantages-section">
-            <div class="adv-disadv-grid">
-                <div class="adv-card">
-                    <h2 class="adv-title">Vantagens</h2>
-                    <div class="adv-box">
-                        <ul class="adv-list">
-                            <li><span class="emoji">💻</span> Fácil de programar com linguagem simples baseada em C/C++</li>
-                            <li><span class="emoji">📍</span> Grande variedade de sensores e módulos compatíveis</li>
-                            <li><span class="emoji">👥</span> Comunidade ativa e tutoriais disponíveis</li>
-                            <li><span class="emoji">💰</span> Baixo custo e acessível para estudantes</li>
-                            <li><span class="emoji">🔧</span> Open source, ou seja, livre para modificar e compartilhar</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="adv-card">
-                    <h2 class="adv-title">Desvantagens</h2>
-                    <div class="adv-box">
-                        <ul class="adv-list">
-                            <li><span class="emoji">⚡</span> Baixo poder de processamento (limitado para projetos muito complexos)</li>
-                            <li><span class="emoji">💾</span> Pouca memória comparado a microcontroladores avançados</li>
-                            <li><span class="emoji">🐢</span> Velocidade menor que placas como Raspberry Pi</li>
-                            <li><span class="emoji">📱</span> Dependência de hardware externo para funções específicas (Wi-Fi, Bluetooth, etc.)</li>
+                    <div class="arduino-info-box">
+                        <p>Bancos de Dados Não Relacionais (NoSQL)</p>
+                        <p>Esses bancos armazenam dados de forma flexível, sem seguir o modelo de tabelas, sendo ideais para grandes volumes de dados, redes sociais, e aplicações em tempo real.</p>
+                         <ul  class="applications-list">
+                            <li>MongoDB  Armazena dados em formato JSON, ótimo para aplicações web modernas.</li>
+                            <li>Redis  Trabalha com dados na memória, excelente para cache e processamento rápido.</li>
+                            <li>Cassandra  Criado pelo Facebook, suporta grandes volumes de dados distribuídos.</li>
+                            <li>Amazon DynamoDB  Serviço da Amazon em nuvem, usado em aplicações que precisam de alta escalabilidade.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-     <!-- Como o Arduino funciona -->
+
+            <!-- Para que serve/aplicações -->
+            <div class="arduino-card">
+                <h2 class="arduino-section-title">O que é um dicionário de dados?<br>Quais os tipos de dados de um banco de dados?</h2>
+                <div class="arduino-applications">
+                    <div class="arduino-info-box">
+                        <p class="intro-text">Um dicionário de dados é um repositório que descreve todas as informações sobre os dados contidos em um banco de dados. Ele não guarda os dados em si, mas sim as informações sobre eles, como nomes, tipos, tamanhos, restrições e relações entre as tabelas.
+
+Em outras palavras, o dicionário de dados funciona como um manual de referência do banco, ajudando desenvolvedores e administradores a entenderem como os dados estão organizados e estruturados.</p>
+                        <p class="apps-title">Função do Dicionário de Dados</p>
+                        <ul class="applications-list">
+                            <li>Define o nome e a descrição de cada campo (coluna).</li>
+                            <li>Informa o tipo de dado (texto, número, data, etc.).</li>
+                            <li>Mostra o tamanho máximo permitido em cada campo.</li>
+                            <li>Indica se o campo pode ou não ser nulo.</li>
+                            <li>Mostra as relações entre tabelas (chaves primárias e estrangeiras).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="content-section">
+        <div class="advantages-section">
+            <div class="arduino-applications">
+                <div class="arduino-info-box">
+                    <h2 class="adv-title">Principais Tipos de Dados em um Banco de Dados</h2>
+                    <div class="adv-box">
+                        <ul class="applications-list">
+                            <li><strong>Numéricos</strong> Usados para armazenar números.
+INT / INTEGER: Números inteiros (ex: 10, -5, 1200)
+FLOAT / DOUBLE / DECIMAL: Números com casas decimais (ex: 10.5, 3.1416)</li>
+                            <li><strong>Textuais</strong>Usados para armazenar letras, palavras ou textos.
+
+CHAR: Texto de tamanho fixo (ex: código com 2 letras “BR”)
+
+VARCHAR: Texto de tamanho variável (ex: nomes, e-mails)
+
+TEXT: Textos longos (ex: descrições, observações)</li>
+                            <li><strong>Data e Hora</strong>Usados para armazenar informações de tempo.
+
+DATE: Apenas a data (ex: 2025-11-13)
+
+TIME: Apenas a hora (ex: 14:30:00)
+
+DATETIME / TIMESTAMP: Data e hora juntos</li>
+                            <li><strong>Booleanos</strong>BOOLEAN / BIT: Representa valores verdadeiros ou falsos (ex: 1 = verdadeiro, 0 = falso)</li>
+                            <li><strong>Binários</strong>Usados para armazenar arquivos ou dados em formato binário.
+
+BLOB (Binary Large Object): Imagens, vídeos, documentos etc.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+     
+
+            <div class="content-section">
+        <div class="arduino-grid">
+            <!-- O que é? -->
+            <div class="arduino-card">
+                <h2 class="arduino-section-title">O que é uma modelagem de banco de dados? E o modelo DER? MER?</h2>
+                
+                <div class="arduino-info-box">
+                <p>A modelagem de banco de dados é o processo de planejar e estruturar como os dados serão organizados dentro de um banco.
+Ela serve para representar de forma lógica e visual como as informações se relacionam entre si, antes de criar o banco propriamente dito.</p>
+ <p>Em outras palavras, é como fazer a planta de uma casa antes da construção — a modelagem mostra quais dados existirão, como eles se conectam e como serão armazenados.</p>
+                </div>
+            
+        </div>
+    </div>
+        </div>
      <div class="how-it-works-section">
-        <h2 class="section-main-title">Como o Arduino funciona?</h2>
+        <h2 class="section-main-title">O que é Modelagem de Banco de Dados</h2>
         <div class="intro-text-box">
-            <p>O Arduino funciona como o "cérebro" de um projeto eletrônico.</p>
-            <p>Ele recebe informações do ambiente, processa esses dados e controla dispositivos de acordo com o que foi programado.</p>
+            <p>A modelagem permite:
+
+Definir entidades (como clientes, produtos, pedidos).
+
+Identificar atributos (como nome, preço, data).
+
+Estabelecer relacionamentos entre essas entidades (como “um cliente faz vários pedidos”).
+
+Ela é fundamental para evitar erros, redundâncias e perda de dados, garantindo que o banco seja eficiente e bem estruturado.
+</p>
+            
         </div>
 
         <div class="workflow-grid">
             <div class="workflow-card">
-                <h3 class="workflow-title">1. Entradas (Input)</h3>
+                <h3 class="workflow-title">O que é o Modelo DER (Diagrama Entidade-Relacionamento)</h3>
                 <div class="workflow-box bordered">
-                    <p class="workflow-intro">São os sensores e dispositivos que enviam informações para o Arduino.</p>
-                    <p class="workflow-label">Exemplos:</p>
+                    <p class="workflow-intro">O DER é a representação gráfica da modelagem de banco de dados.
+Ele mostra como as entidades se conectam, usando símbolos e linhas que indicam os relacionamentos.</p>
+                    <p class="workflow-label">Elementos principais do DER:</p>
                     <ul class="workflow-list">
-                        <li>Sensor de temperatura 🌡️</li>
-                        <li>Sensor de luz (LDR) 💡</li>
-                        <li>Botão ⚪</li>
+                        <li>Entidades: São os objetos ou coisas do mundo real que queremos representar (ex: Cliente, Produto, Pedido).</li>
+                        <li>Atributos: São as características das entidades (ex: nome, endereço, preço).</li>
+                        <li>Relacionamentos: Mostram como as entidades se ligam (ex: Cliente faz Pedido).</li>
                     </ul>
-                    <p class="workflow-footer">Esses componentes mandam sinais elétricos para os pinos de entrada da placa.</p>
+                        <div class="arduino-image-container">
+                        <img src="./media/windo.png" alt="Arduino Uno" class="arduino-img">
+                    </div>
                 </div>
             </div>
 
             <div class="workflow-card">
-                <h3 class="workflow-title">2. Processamento</h3>
-                <div class="workflow-box">
-                    <p>O microcontrolador (geralmente um ATmega328 no Arduino Uno) interpreta o programa que você gravou nele usando a IDE Arduino.</p>
-                    <p>Ele decide o que fazer com os dados recebidos — por exemplo: "Se o sensor de luz detectar escuridão, acenda o LED."</p>
+                <h3 class="workflow-title">O que é o MER (Modelo Entidade-Relacionamento)</h3>
+                <div class="workflow-box bordered">
+                    <p class="workflow-intro">O MER (Modelo Entidade-Relacionamento) é o modelo conceitual que descreve o conteúdo do banco de dados de forma textual ou lógica, enquanto o DER é a representação gráfica desse modelo.</p>
+                    <p class="workflow-label">Em resumo:</p>
+                    <ul class="workflow-list">
+                        <li>MER: É o conceito (a descrição das entidades, atributos e relacionamentos).</li>
+                        <li>DER: É o desenho (a visualização do MER em forma de diagrama).</li>
+                        
+                    </ul>
+                                        <div class="arduino-image-container">
+                        <img src="./media/windo.png" alt="Arduino Uno" class="arduino-img">
+                    </div>
                 </div>
             </div>
 
