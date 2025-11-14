@@ -356,7 +356,7 @@ nav {
 }
 
 
-/* Página Arduino */
+
 .arduino-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -464,13 +464,6 @@ nav {
     margin-bottom: 0;
 }
 
-.emoji {
-    font-size: 20px;
-    flex-shrink: 0;
-    display: inline-block;
-    width: 24px;
-    text-align: center;
-}
 
 /* Vantagens e Desvantagens - Arduino */
 .advantages-section {
@@ -863,7 +856,7 @@ nav {
 
 
 footer {
-    background-color: #022c39; /* cor escura igual à imagem */
+    background-color: #022c39; 
     color: white;
     text-align: center;
     display: flex;
