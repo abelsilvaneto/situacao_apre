@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="./boh.js" defer></script>
     <link rel="shortcut icon" href="chess_queen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" type="image/png">
     <title>Fundamentos da Eletroeletrônica</title>
 
@@ -290,10 +291,10 @@
             <h3 class="embedded-subtitle">Como funciona</h3>
             <div class="embedded-box">
                 <p class="embedded-intro">Um sistema embarcado combina:</p>
-                <ol class="embedded-ordered-list">
+                <ul class="embedded-ordered-list">
                     <li><strong>Hardware</strong> — sensores, atuadores, microcontroladores (como o Arduino).</li>
                     <li><strong>Software</strong> — programas que controlam o funcionamento do sistema.</li>
-                </ol>
+                </ul>
                 <p class="embedded-footer">Esses dois elementos trabalham juntos para monitorar, processar e
                     controlar alguma função específica.</p>
             </div>
@@ -427,25 +428,181 @@
                 <li>Controlar servomotores (indiretamente)</li>
             </ul>
         </div>
+    </div><br>
+
+
+
+            <div class="arduino-card">
+        <h2 class="arduino-section-title">Calculadora da Lei de Ohm
+        </h2>
+        <div class="embedded-definition">
+            <div class="workflow-box">
+                <input id="tensao" type="number" placeholder="Tensão (V)"><br>
+                <input id="corrente" type="number" placeholder="Corrente (A)"><br>
+                <input id="resistencia" type="number" placeholder="Resistência (Ω)"><br>
+
+                <button onclick="calcular()">Calcular</button>
+                <button onclick="calcularPotencia()">Calcular Potencia</button>
+                
+                <div id="res" style="margin-top: 15px; font-size: 18px;"></div>
+            </div>
+        </div>
+                <div class="advantages-section">
+        <div class="arduino-card">
+            <h2 class="arduino-section-title">O que é um diodo?</h2>
+            <div class="arduino-applications">
+                <div class="arduino-info-box">
+                    <p>Um diodo é um componente eletrônico que permite a passagem de corrente elétrica em apenas um sentido. Ele funciona como uma “válvula” elétrica: deixa a corrente passar em um lado (sentido direto) e bloqueia no outro (sentido reverso).
+É muito usado em retificadores, fontes de energia e proteção de circuitos.</p>
+                </div>
+            </div>
+        </div><br><br>
+            <div class="arduino-card">
+                <h3 class="arduino-section-title">O que é um diodo LED?</h3>
+                <div class="arduino-applications">
+                    <div class="arduino-info-box">
+                    <p>O LED (Light Emitting Diode) é um tipo especial de diodo que, além de conduzir corrente em apenas um sentido, emite luz quando a corrente passa por ele.
+Pode ter diferentes cores (vermelho, azul, verde, branco) e é usado em indicadores, iluminação, painéis e dispositivos eletrônicos em geral.</p>
+                </div>
+                </div>
+            </div><br>
+            <div class="arduino-card">
+                <h2 class="arduino-section-title">O que é um display de 7 segmentos?</h2>
+                <div class="arduino-content-wrapper">
+                    <div class="arduino-info-box">
+                        <p>Um display de 7 segmentos é um componente formado por 7 LEDs organizados em forma de “8”, permitindo exibir números de 0 a 9 e algumas letras simples. Cada “segmento” acende separadamente, e a combinação deles forma o número desejado.
+É muito usado em relógios digitais, calculadoras, painéis eletrônicos e medidores.</p>
+                    </div>
+                    <div class="arduino-image-container">
+                        <img src="./media/OIP-removebg-preview.png"
+                            alt="Arduino Uno" class="arduino-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+    <div class="programming-content">
+                <h2 class="arduino-section-title">Apresenando um programa para leitura de dados de um sensor analógico, acionando saídas digitais.
+        </h2>
+
+
+        <div class="code-example-container">
+            <pre class="code-block"><code>const express = require('express')
+const app = express()
+const { SerialPort, ReadlineParser } = require('serialport')
+const readline = require('readline')
+
+const cors = require('cors')
+
+const PORT = 3000   // PORT do protocolo TCP
+const hostname = 'localhost'    // nome do Computador e seu IP = 127.0.0.1 (IP de teste)
+
+const BAUD_RATE = 9600
+const SERIAL_PORT = "COM9"
+
+// ------ config de Middleware ----------
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+app.use(cors())
+
+// -------- INICIALIZAÇÃO ARDUINO -------------
+const arduino = new SerialPort({
+    path: SERIAL_PORT,
+    baudRate: BAUD_RATE,
+})
+
+const parserDados = arduino.pipe(new ReadlineParser({delimiter: "\r\n"}))
+
+arduino.on("open", ()=>{
+    console.log(`Conectado ao Arduino em ${SERIAL_PORT}`)
+})
+
+arduino.on("error", (err)=>{
+    console.error('Erro na comunicação serial', err)
+})
+
+// --- parser das linhas: garantir a recepção completa dos dados
+parserDados.on("dados", (dad)=>{
+    const linha = dad.toString().trim()
+
+    if(linha > 0){
+        console.log('Arduino: ',linha)
+    }
+})
+
+// -------- leitura do teclado para testes / troca de dados manuais -----------
+
+const teclado = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+})
+
+teclado.on("line", (input)=>{
+    const comando2 = input.trim()
+
+    if(comando2 === 's' || comando2 === 'd'){
+        arduino.write(comando2, (err)=>{
+            if(err){
+                console.error("Erro ao enviar ocomando pelo teclado: ", err)
+            }else{
+                console.log(`Comando: ${comando2} enviado ao arduino via teclado`)
+            }
+        })
+    }else{
+        console.log("Digite 's' (ligar) ou 'd' (desligar) ")
+    }
+})
+
+// ------- programando as rotas http => endpoints -----
+
+app.get('/ligar', (req,res)=>{
+    arduino.write("s", (err)=>{
+        if(err){
+            console.error("Erro ao escrever no arduino: ", err)
+            return res.status(500).json({ led: "erro", detalhe: "falha ao enviar o comando"})
+        }
+    })
+    res.status(200).json({ led: "ligado"})
+})
+
+app.get('/desligar', (req,res)=>{
+    arduino.write("d", (err)=>{
+        if(err){
+            console.error("Erro ao escrever no arduino: ", err)
+            return res.status(500).json({ led: "erro", detalhe: "falha ao enviar o comando"})
+        }
+    })
+    res.status(200).json({ led: "desligado"})
+})
+
+
+
+
+app.listen(PORT, hostname, ()=>{
+    console.log(`Servidor rodando em ${hostname}:${PORT}`)
+    console.log("Digite 's' para ligar e 'd' para desligar")
+    console.log('-------------------------------------------')
+})</code></pre>
+        </div>
     </div>
 
-    <footer>
-        <div>
-            <p><strong>FEITO POR:</strong><br>ABEL SILVA NETO</p>
-        </div>
+        <footer>
+            <div>
+                <p><strong>FEITO POR:</strong><br>ABEL SILVA NETO</p>
+            </div>
 
-        <div>
-            <p><strong>COLABORAÇÃO COM</strong><br>SESI/SENAI</p>
-        </div>
+            <div>
+                <p><strong>COLABORAÇÃO COM</strong><br>SESI/SENAI</p>
+            </div>
 
-        <div>
-            <p><strong>CONTATOS:</strong><br>
-                <a href="mailto:abel_silva-neto@estudante.esisenai.org.br">
-                    abel_silva-neto@estudante.sesisenai.org.br
-                </a>
-            </p>
-        </div>
-    </footer>
+            <div>
+                <p><strong>CONTATOS:</strong><br>
+                    <a href="mailto:abel_silva-neto@estudante.esisenai.org.br">
+                        abel_silva-neto@estudante.sesisenai.org.br
+                    </a>
+                </p>
+            </div>
+        </footer>
 </body>
 
 </html>
