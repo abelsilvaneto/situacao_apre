@@ -25,7 +25,7 @@
     <div class="hero"><br>
 
         <br>
-        <h1 class="main-title">Fundamentos de<br>Eletroeletrônica</h1>
+        <h1 class="title">Fundamentos de<br>Eletroeletrônica</h1>
     </div>
 
     <div class="content-section">
@@ -36,14 +36,16 @@
             <div class="component-card">
                 <h3 class="component-title">Resistor</h3>
                 <div class="component-content">
-                    <div class="info-box">
+                    <div class="arduino-content-wrapper">
+                            <div class="arduino-info-box">
                         <p><strong>Função:</strong> Limita ou controla a passagem de corrente elétrica em um circuito.
                         </p>
                         <p><strong>Uso comum:</strong> Proteger componentes sensíveis (como LEDs) e ajustar tensões.</p>
                         <p><strong>Exemplo prático:</strong> Em um circuito com LED, o resistor evita que o LED queime
                             por excesso de corrente.</p>
+                            </div>
                     </div>
-                    <div class="arduino-image-container">
+                    <div class="about-right">
 
                         <img src="./media/resistor_sim.png" alt="Arduino Uno" class="arduino-img">
                     </div>
@@ -53,11 +55,12 @@
             <div class="component-card">
                 <h3 class="component-title">diodo LED</h3>
                 <div class="component-content">
-                    <div class="arduino-image-container">
+                    <div class="about-right">
 
                         <img src="./media/led_sim.png" alt="Arduino Uno" class="arduino-img">
                     </div>
-                    <div class="info-box">
+                    <div class="arduino-content-wrapper">
+                        <div class="arduino-info-box">
                         <p><strong>Função:</strong> Emite luz quando a corrente elétrica passa por ele em um único
                             sentido.</p>
                         <p><strong>Características:</strong> Possui polaridade (lado positivo — ânodo / lado negativo —
@@ -69,7 +72,7 @@
             </div>
         </div>
     </div>
-
+</div>
 
     <div class="content-section">
         <div class="components-grid">
@@ -77,7 +80,8 @@
             <div class="component-card">
                 <h3 class="component-title">Transistor</h3>
                 <div class="component-content">
-                    <div class="info-box">
+                    <div class="arduino-content-wrapper">
+                    <div class="arduino-info-box">
                         <p><strong>Função:</strong> Atua como chave eletrônica (liga/desliga) ou amplificador de sinal.
                         </p>
                         <p><strong>Tipos principais:</strong> NPN e PNP (bipolares), MOSFET (de efeito de campo).</p>
@@ -85,7 +89,8 @@
                             microcontroladores.</p>
                         <p><strong>Exemplo prático:</strong> Controle da velocidade de motores ou volume de áudio.</p>
                     </div>
-                    <div class="arduino-image-container">
+                    </div>
+                    <div class="about-right">
 
                         <img src="./media/trans_sim.png" alt="Arduino Uno" class="arduino-img">
                     </div>
@@ -95,13 +100,14 @@
             <div class="component-card">
                 <h3 class="component-title">Circuito Integrado</h3>
                 <div class="component-content">
-                    <div class="symbol-area">
+                    <div class="about-right">
 
                         <div class="arduino-image-container">
                             <img src="./media/555-removebg-preview.png" alt="Arduino Uno" class="arduino-img">
                         </div>
                     </div>
-                    <div class="info-box">
+                    <div class="arduino-content-wrapper">
+                        <div class="arduino-info-box">
                         <p><strong>Função:</strong> Reúne vários componentes eletrônicos (transistores, resistores,
                             capacitores) em um único chip.</p>
                         <p><strong>Vantagem:</strong> Diminui o tamanho dos circuitos e aumenta a eficiência.</p>
@@ -109,13 +115,14 @@
                             (como o Arduino).</p>
                         <p><strong>Exemplo prático:</strong> O CI 555 é usado como temporizador; o CI 7400 em circuitos
                             lógicos.</p>
+                            </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="hero internal">
-        <h1 class="main-title">Arduino</h1>
+        <h1 class="title">Arduino</h1>
     </div>
 
     <div class="content-section">
@@ -202,10 +209,10 @@
             </div>
         </div><br><br>
 
-        <div class="workflow-grid">
-            <div class="workflow-card">
+        <div class="embedded-advantages-grid">
+            <div class="embedded-adv-card">
                 <h3 class="arduino-section-title">1. Entradas (Input)</h3>
-                <div class="workflow-box">
+                <div class="embedded-box">
                     <p class="workflow-intro">São os sensores e dispositivos que enviam informações para o Arduino.</p>
                     <p class="workflow-label">Exemplos:</p>
                     <ul class="workflow-list">
@@ -218,7 +225,7 @@
                 </div>
             </div>
 
-            <div class="workflow-card">
+            <div class="embedded-adv-card">
                 <h3 class="arduino-section-title">2. Processamento</h3>
                 <div class="workflow-box">
                     <p>O microcontrolador (geralmente um ATmega328 no Arduino Uno) interpreta o programa que você gravou
@@ -228,7 +235,7 @@
                 </div>
             </div>
 
-            <div class="workflow-card">
+            <div class="embedded-adv-card">
                 <h3 class="arduino-section-title">3. Saídas (Output)</h3>
                 <div class="workflow-box">
                     <p>Depois de processar as informações, o Arduino envia comandos para os dispositivos de saída.</p>
@@ -244,7 +251,7 @@
                 </div>
             </div>
 
-            <div class="workflow-card">
+            <div class="embedded-adv-card">
                 <h3 class="arduino-section-title">4. Programação</h3>
                 <div class="workflow-box">
                     <p>O comportamento do Arduino é definido por um programa (sketch) escrito na Arduino IDE, em
@@ -254,7 +261,7 @@
                 </div>
             </div>
 
-            <div class="workflow-card">
+            <div class="embedded-adv-card">
                 <h3 class="arduino-section-title">5. Alimentação</h3>
                 <div class="workflow-box">
                     <p class="workflow-intro">O Arduino pode ser ligado por:</p>
@@ -321,7 +328,7 @@
                 <div class="embedded-adv-card">
                     <h3 class="embedded-subtitle centered">Vantagens</h3>
                     <div class="embedded-box compact">
-                        <ul class="simple-list">
+                        <ul>
                             <li>Automação e precisão nos sistemas</li>
                             <li>Economia de energia</li>
                             <li>Maior segurança e confiabilidade</li>
@@ -332,7 +339,7 @@
                 <div class="embedded-adv-card">
                     <h3 class="embedded-subtitle centered">Desvantagens</h3>
                     <div class="embedded-box compact">
-                        <ul class="simple-list">
+                        <ul>
                             <li>Difícil de modificar (projetos muito específicos)</li>
                             <li>Custo maior em equipamentos simples</li>
                             <li>Necessidade de técnicos especializados</li>
