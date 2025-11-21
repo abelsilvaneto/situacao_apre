@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="chess_queen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" type="image/png">
     <title>Lógica Computacional</title>
 
+    
 </head>
 <body>
     <nav>
@@ -14,7 +15,7 @@
             <a href="./Fundamentos_banco.html" class="nav-link">Fundamentos de<br>Bancos de Dados</a>
             <a href="./Logica_Computacional.html" class="nav-link">Lógica<br>Computacional</a>
             <a href="./funda_eletro.html" class="nav-link">Fundamentos da<br>Eletroeletrônica</a>
-            <a href="./Fundamentos_Redes.html" class="nav-link">Fundamentos da<br>Fundamentos de Redes</a>
+            <a href="./Fundamentos_Redes.html" class="nav-link">Fundamentos<br>de Redes</a>
             <a href="./Fundamentos_tecnologia.html" class="nav-link">Fundamentos da<br>Tecnologia da Informação</a>
         </div>
     </nav>
@@ -135,22 +136,29 @@ Uma IDE normalmente oferece:</p><ul  class="applications-list">
             </div>
         </div>
         </div>
+  <div class="hero internal">
+        <h1 class="main-title">Códigos que fazemos</h1>
+    </div>
+
     <div class="content-section">
         <div class="advantages-section">
             <div class="arduino-applications">
                 <div class="arduino-info-box">
-                    <h2 class="adv-title">Quais os tipos de dados mais usados em algoritmos (portugol)? </h2>
             <div class="code-example-container">
-                <pre class="code-block"><code><span class="code-keyword">void</span> <span class="code-function">setup</span>() {
-<span class="code-function">pinMode</span>(<span class="code-number">13</span>, <span class="code-constant">OUTPUT</span>); <span class="code-comment">// Define o pino 13 como saída</span>
+                <pre class="code-block"><code>// Ordem crescente de 1 a 20
+let crescente = [];
+for (let i = 1; i <= 20; i++) {
+    crescente.push(i);
 }
 
-<span class="code-keyword">void</span> <span class="code-function">loop</span>() {
-<span class="code-function">digitalWrite</span>(<span class="code-number">13</span>, <span class="code-constant">HIGH</span>); <span class="code-comment">// Liga o LED</span>
-<span class="code-function">delay</span>(<span class="code-number">1000</span>);            <span class="code-comment">// Espera 1 segundo</span>
-<span class="code-function">digitalWrite</span>(<span class="code-number">13</span>, <span class="code-constant">LOW</span>);  <span class="code-comment">// Desliga o LED</span>
-<span class="code-function">delay</span>(<span class="code-number">1000</span>);            <span class="code-comment">// Espera 1 segundo</span>
-}</code></pre>
+// Ordem decrescente de 20 a 1
+let decrescente = [];
+for (let i = 20; i >= 1; i--) {
+    decrescente.push(i);
+}
+
+console.log("Crescente:", crescente);
+console.log("Decrescente:", decrescente);</code></pre>
             </div>
                     </div>
                 </div>
@@ -175,7 +183,7 @@ Ela serve para representar de forma lógica e visual como as informações se re
         </div>
     </div>
         </div>
-     <div class="how-it-works-section">
+     <div class="content-section">
         <h2 class="section-main-title">O que é Modelagem de Banco de Dados</h2>
         <div class="intro-text-box">
             <p>A modelagem permite:

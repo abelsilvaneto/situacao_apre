@@ -85,13 +85,6 @@ nav {
     font-style: italic;
 }
 
-.subtitle {
-    font-size: 68px;
-    font-weight: 300;
-    color: #1a1a1a;
-    font-style: italic;
-}
-
 .main-title {
     font-size: 72px;
     font-weight: 300;
@@ -192,11 +185,6 @@ nav {
     text-align: center;
 }
 
-.component-content {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
 
 .info-box {
     background: rgba(95, 158, 160, 0.6);
@@ -570,10 +558,6 @@ nav {
     font-style: italic;
 }
 
-.embedded-examples-list {
-    list-style: none;
-    padding: 0;
-}
 
 .embedded-examples-list li {
     color: #1a1a1a;
@@ -581,7 +565,6 @@ nav {
     line-height: 1.7;
     margin-bottom: 15px;
 }
-
 
 
 .embedded-advantages-grid {
@@ -596,10 +579,6 @@ nav {
     gap: 20px;
 }
 
-.simple-list {
-    list-style: none;
-    padding: 0;
-}
 
 .simple-list li {
     color: #1a1a1a;
@@ -662,31 +641,9 @@ nav {
     display: block;
 }
 
-.code-keyword {
-    color: #569cd6;
-    font-weight: 600;
-}
-
-.code-function {
-    color: #dcdcaa;
-}
-
-.code-number {
-    color: #b5cea8;
-}
-
-.code-constant {
-    color: #4ec9b0;
-}
-
-.code-comment {
-    color: #6a9955;
-    font-style: italic;
-}
 
 footer {
     background-color: #022c39;
-    /* cor escura igual à imagem */
     color: white;
     text-align: center;
     display: flex;
