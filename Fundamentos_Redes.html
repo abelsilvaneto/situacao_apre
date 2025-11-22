@@ -29,11 +29,12 @@
     </div>
 
     <div class="content-section">
-        <h2 class="section-title">O que são Redes de Computadores?</h2>
 
-        <div class="components-grid">
+
+        <div class="arduino-grid">
             <!-- Resistor e LED -->
-            <div class="component-card">
+            <div class="arduino-card">
+                <h2 class="arduino-section-title">O que são Redes de Computadores?</h2>
                 <div class="arduino-applications">
                     <div class="arduino-info-box">
                         <p>
@@ -168,11 +169,10 @@
                     costa e quais sistemas ou consórcios são responsáveis por cada rota.</p>
             </div>
             <div class="arduino-image-container">
-                <iframe src="https://www.submarinecablemap.com/" title="Submarine Cable Map — TeleGeography"
-                    loading="lazy"></iframe>
+                <img src="./media/mapa.jpg" alt="mapa da net" class="arduino-img">
             </div>
         </div>
-    </div>
+    </div><br>
 
     <!-- Para que serve/aplicações -->
     <div class="arduino-card">
@@ -383,54 +383,57 @@
         <h2 class="arduino-section-title">modelo TCP/IP</h2>
         <div class="arduino-applications">
             <div class="arduino-info-box">
-                <p class="intro-text">O modelo TCP/IP é o conjunto de protocolos que realmente funciona na internet hoje.
-Ele foi criado antes do modelo OSI e é mais simplificado, dividido em 4 camadas principais, cada uma responsável por uma parte da comunicação entre dispositivos.
+                <p class="intro-text">O modelo TCP/IP é o conjunto de protocolos que realmente funciona na internet
+                    hoje.
+                    Ele foi criado antes do modelo OSI e é mais simplificado, dividido em 4 camadas principais, cada uma
+                    responsável por uma parte da comunicação entre dispositivos.
 
-Enquanto o OSI é um modelo teórico, o TCP/IP é prático, usado na vida real em redes e na internet.</p><br>
+                    Enquanto o OSI é um modelo teórico, o TCP/IP é prático, usado na vida real em redes e na internet.
+                </p><br>
                 <p class="workflow-label">As 4 camadas do modelo TCP/IP</p>
                 <ul class="applications-list">
                     <li>Camada de Acesso à Rede (Network Access / Link)
 
-Responsável pela transmissão física dos dados pela rede.
-Inclui: cabos, Wi-Fi, placas de rede, protocolos Ethernet, Wi-Fi, etc.
-É equivalente às camadas Física + Enlace do modelo OSI.
+                        Responsável pela transmissão física dos dados pela rede.
+                        Inclui: cabos, Wi-Fi, placas de rede, protocolos Ethernet, Wi-Fi, etc.
+                        É equivalente às camadas Física + Enlace do modelo OSI.
                     </li>
                     <li>Camada de Internet
 
-Define o endereçamento IP e o roteamento dos pacotes pela rede.
-Protocolos principais:
+                        Define o endereçamento IP e o roteamento dos pacotes pela rede.
+                        Protocolos principais:
 
-IP (IPv4 e IPv6)
+                        IP (IPv4 e IPv6)
 
-ICMP (ping)
+                        ICMP (ping)
 
-ARP
+                        ARP
 
-Corresponde à Camada 3 (Rede) do OSI.</li>
+                        Corresponde à Camada 3 (Rede) do OSI.</li>
                     <li>Camada de Transporte
 
-Garantia de envio, controle de fluxo e portas de comunicação.
-Protocolos principais:
+                        Garantia de envio, controle de fluxo e portas de comunicação.
+                        Protocolos principais:
 
-TCP (confiável)
+                        TCP (confiável)
 
-UDP (rápido e sem controle)
+                        UDP (rápido e sem controle)
 
-Equivalente à Camada 4 (Transporte) do OSI.</li>
+                        Equivalente à Camada 4 (Transporte) do OSI.</li>
                     <li>Camada de Aplicação
 
-Onde ficam os softwares e protocolos usados pelo usuário.
-Exemplos:
+                        Onde ficam os softwares e protocolos usados pelo usuário.
+                        Exemplos:
 
-HTTP/HTTPS (acesso a sites)
+                        HTTP/HTTPS (acesso a sites)
 
-FTP (arquivos)
+                        FTP (arquivos)
 
-SMTP/IMAP/POP3 (e-mail)
+                        SMTP/IMAP/POP3 (e-mail)
 
-DNS
+                        DNS
 
-Agrupa as camadas Aplicação + Apresentação + Sessão do OSI.</li>
+                        Agrupa as camadas Aplicação + Apresentação + Sessão do OSI.</li>
                 </ul>
             </div>
         </div>
@@ -440,203 +443,236 @@ Agrupa as camadas Aplicação + Apresentação + Sessão do OSI.</li>
         <h2 class="arduino-section-title">O que é o protocolo IP V4 ? e o IP V6?</h2>
         <div class="arduino-applications">
             <div class="arduino-info-box">
-                <p class="intro-text">O IPv4 e o IPv6 são versões do protocolo IP (Internet Protocol), responsável por endereçar e identificar cada dispositivo em uma rede, permitindo que os dados cheguem ao destino correto — como se fossem “endereços de casas” na internet.</p><br>
+                <p class="intro-text">O IPv4 e o IPv6 são versões do protocolo IP (Internet Protocol), responsável por
+                    endereçar e identificar cada dispositivo em uma rede, permitindo que os dados cheguem ao destino
+                    correto — como se fossem “endereços de casas” na internet.</p><br>
                 <p class="workflow-label">As 4 camadas do modelo TCP/IP</p>
                 <ul class="applications-list">
                     <li>O que é o IPv4 (Internet Protocol Version 4)?
 
-O IPv4 é a 4ª versão do protocolo IP e é o mais tradicional, criado nos anos 1980.
-Ele usa endereços de 32 bits, permitindo cerca de 4,3 bilhões de endereços diferentes.
+                        O IPv4 é a 4ª versão do protocolo IP e é o mais tradicional, criado nos anos 1980.
+                        Ele usa endereços de 32 bits, permitindo cerca de 4,3 bilhões de endereços diferentes.
 
- Formato do IPv4
+                        Formato do IPv4
 
-É composto por 4 números de 0 a 255, separados por pontos:
+                        É composto por 4 números de 0 a 255, separados por pontos:
 
-Exemplo:
-192.168.0.1
+                        Exemplo:
+                        192.168.0.1
 
- Problema do IPv4
+                        Problema do IPv4
 
-Com o crescimento da internet, os 4,3 bilhões de endereços acabaram, pois hoje existem bilhões de celulares, computadores, smart TVs, câmeras, etc.
+                        Com o crescimento da internet, os 4,3 bilhões de endereços acabaram, pois hoje existem bilhões
+                        de celulares, computadores, smart TVs, câmeras, etc.
 
-Para contornar isso, foram criadas técnicas como:
+                        Para contornar isso, foram criadas técnicas como:
 
-NAT (um roteador “reutilizando” o mesmo IP público para vários dispositivos)
+                        NAT (um roteador “reutilizando” o mesmo IP público para vários dispositivos)
 
-Redes privadas (192.168.x.x, 10.x.x.x)
+                        Redes privadas (192.168.x.x, 10.x.x.x)
 
-Mesmo assim, foi necessário criar uma versão nova.
+                        Mesmo assim, foi necessário criar uma versão nova.
                     </li>
                     <li>O que é o IPv6 (Internet Protocol Version 6)?
 
-O IPv6 é a nova versão do protocolo IP, criada para substituir o IPv4.
-Ele usa 128 bits, permitindo cerca de 340 undecilhões de endereços (um número absurdamente grande).
+                        O IPv6 é a nova versão do protocolo IP, criada para substituir o IPv4.
+                        Ele usa 128 bits, permitindo cerca de 340 undecilhões de endereços (um número absurdamente
+                        grande).
 
- Formato do IPv6
+                        Formato do IPv6
 
-É formado por 8 blocos de números hexadecimais:
+                        É formado por 8 blocos de números hexadecimais:
 
-Exemplo:
-2001:0db8:85a3:0000:0000:8a2e:0370:7334
+                        Exemplo:
+                        2001:0db8:85a3:0000:0000:8a2e:0370:7334
 
-Pode ser abreviado:
-2001:db8:85a3::8a2e:370:7334
+                        Pode ser abreviado:
+                        2001:db8:85a3::8a2e:370:7334
 
- Vantagens do IPv6
+                        Vantagens do IPv6
 
-Número de endereços praticamente infinito
+                        Número de endereços praticamente infinito
 
-Comunicação mais rápida sem NAT
+                        Comunicação mais rápida sem NAT
 
-Segurança nativa (IPSec)
+                        Segurança nativa (IPSec)
 
-Melhor performance em redes modernas
+                        Melhor performance em redes modernas
 
-Maior organização de endereços
+                        Maior organização de endereços
 
-O IPv6 foi criado para suportar a internet do futuro (IoT, automação, bilhões de dispositivos).</li>
-                    
+                        O IPv6 foi criado para suportar a internet do futuro (IoT, automação, bilhões de dispositivos).
+                    </li>
+
                 </ul>
             </div>
         </div>
     </div>
     <br>
-<div class="arduino-card">
+    <div class="arduino-card">
         <h2 class="arduino-section-title">O que é o protocolo HTTP?</h2>
         <div class="arduino-applications">
             <div class="arduino-info-box">
-                <p class="intro-text">O HTTP (HyperText Transfer Protocol) é o protocolo de comunicação usado para acessar páginas e serviços na web.
-Ele define como clientes (como navegadores) e servidores trocam mensagens, solicitando e enviando conteúdos como textos, imagens, vídeos e dados.</p><br>
+                <p class="intro-text">O HTTP (HyperText Transfer Protocol) é o protocolo de comunicação usado para
+                    acessar páginas e serviços na web.
+                    Ele define como clientes (como navegadores) e servidores trocam mensagens, solicitando e enviando
+                    conteúdos como textos, imagens, vídeos e dados.</p><br>
                 <ul class="applications-list">
                     <li>Como o HTTP funciona?
 
-O cliente faz uma requisição ao servidor
-(por exemplo, quando você digita um site no navegador).
+                        O cliente faz uma requisição ao servidor
+                        (por exemplo, quando você digita um site no navegador).
 
-O servidor recebe a solicitação, processa e envia uma resposta.
+                        O servidor recebe a solicitação, processa e envia uma resposta.
 
-O navegador interpreta a resposta e exibe a página solicitada.
+                        O navegador interpreta a resposta e exibe a página solicitada.
                     </li>
                     <li>Estrutura básica de uma requisição HTTP
 
-Uma solicitação HTTP contém:
+                        Uma solicitação HTTP contém:
 
-Método (GET, POST, PUT, DELETE…)
+                        Método (GET, POST, PUT, DELETE…)
 
-URL
+                        URL
 
-Cabeçalhos (headers)
+                        Cabeçalhos (headers)
 
-Corpo (body) — opcional (usado em POST/PUT)</li>
+                        Corpo (body) — opcional (usado em POST/PUT)</li>
                     <li>Métodos HTTP principais
 
-GET → buscar informações
+                        GET → buscar informações
 
-POST → enviar dados
+                        POST → enviar dados
 
-PUT → atualizar dados
+                        PUT → atualizar dados
 
-DELETE → apagar dados
+                        DELETE → apagar dados
 
-PATCH → atualizar parcialmente
+                        PATCH → atualizar parcialmente
 
-HEAD → obter apenas cabeçalhos
+                        HEAD → obter apenas cabeçalhos
 
-OPTIONS → verificar regras de comunicação</li>
+                        OPTIONS → verificar regras de comunicação</li>
                     <li>HTTP é um protocolo stateless
 
-Isso significa que ele não guarda estado.
-Cada requisição é independente da outra.
-Por isso, usamos cookies, sessões e tokens (JWT) para manter logins e dados do usuário.</li>
+                        Isso significa que ele não guarda estado.
+                        Cada requisição é independente da outra.
+                        Por isso, usamos cookies, sessões e tokens (JWT) para manter logins e dados do usuário.</li>
                     <li>O que é HTTP vs HTTPS?
 
-HTTP → comunicação comum
+                        HTTP → comunicação comum
 
-HTTPS → versão segura, com criptografia (SSL/TLS)
+                        HTTPS → versão segura, com criptografia (SSL/TLS)
 
-HTTPS protege contra:
+                        HTTPS protege contra:
 
-roubo de senhas,
+                        roubo de senhas,
 
-ataques man-in-the-middle,
+                        ataques man-in-the-middle,
 
-espionagem de tráfego.</li>
+                        espionagem de tráfego.</li>
                     <li>Exemplos de uso do HTTP
 
-Abrir um site
+                        Abrir um site
 
-Fazer login em um aplicativo
+                        Fazer login em um aplicativo
 
-Enviar um formulário
+                        Enviar um formulário
 
-Consumir APIs (REST)
+                        Consumir APIs (REST)
 
-Comunicação entre sistemas</li>
+                        Comunicação entre sistemas</li>
                 </ul>
             </div>
         </div>
     </div>
     <br>
-<div class="arduino-card">
+    <div class="arduino-card">
         <h2 class="arduino-section-title">E o HTTPS ?</h2>
         <div class="arduino-applications">
             <div class="arduino-info-box">
-                <p class="intro-text">O HTTPS (HyperText Transfer Protocol Secure) é a versão segura do HTTP, usada para acessar sites e serviços na web com criptografia.
-Ele garante que os dados enviados entre o navegador e o servidor não possam ser lidos, alterados ou roubados por terceiros.</p><br>
+                <p class="intro-text">O HTTPS (HyperText Transfer Protocol Secure) é a versão segura do HTTP, usada para
+                    acessar sites e serviços na web com criptografia.
+                    Ele garante que os dados enviados entre o navegador e o servidor não possam ser lidos, alterados ou
+                    roubados por terceiros.</p><br>
                 <ul class="applications-list">
                     <li>O que torna o HTTPS seguro?
 
-O HTTPS utiliza um protocolo de segurança chamado SSL/TLS, que faz três coisas importantes:
+                        O HTTPS utiliza um protocolo de segurança chamado SSL/TLS, que faz três coisas importantes:
 
-1. Criptografia
+                        1. Criptografia
 
-Os dados enviados são embaralhados.
-Se alguém interceptar, não consegue entender nada.
+                        Os dados enviados são embaralhados.
+                        Se alguém interceptar, não consegue entender nada.
 
-2. Autenticação do servidor
+                        2. Autenticação do servidor
 
-Garante que você está se conectando ao site verdadeiro, e não a um falso.
-Isso é feito por meio de certificados digitais.
+                        Garante que você está se conectando ao site verdadeiro, e não a um falso.
+                        Isso é feito por meio de certificados digitais.
 
-3. Integridade dos dados
+                        3. Integridade dos dados
 
-Garante que as informações não foram alteradas durante o envio.
+                        Garante que as informações não foram alteradas durante o envio.
                     </li>
                     <li>Como funciona na prática?
 
-Quando você acessa um site com HTTPS:
+                        Quando você acessa um site com HTTPS:
 
-O navegador pede uma conexão segura.
+                        O navegador pede uma conexão segura.
 
-O servidor envia seu certificado digital.
+                        O servidor envia seu certificado digital.
 
-O navegador verifica se ele é confiável.
+                        O navegador verifica se ele é confiável.
 
-Uma chave de criptografia é criada.
+                        Uma chave de criptografia é criada.
 
-A comunicação segura começa.
+                        A comunicação segura começa.
 
-Tudo isso acontece em milissegundos.</li>
+                        Tudo isso acontece em milissegundos.</li>
                     <li>Exemplos de onde o HTTPS é essencial:
 
-Login em sites
+                        Login em sites
 
-Internet banking
+                        Internet banking
 
-Compras online
+                        Compras online
 
-Apps de mensagens
+                        Apps de mensagens
 
-Envio de arquivos
+                        Envio de arquivos
 
-APIs que trocam dados sensíveis</li>
+                        APIs que trocam dados sensíveis</li>
                 </ul>
             </div>
         </div>
     </div>
     <br>
 
+    <div class="arduino-card">
+        <h2 class="arduino-section-title">exemplo de framework para programação do protocolo HTTP com uso do node.js
+        </h2>
+        <div class="arduino-applications">
+            <div class="arduino-info-box">
+                <p class="intro-text">Um exemplo muito utilizado de framework para trabalhar com o protocolo HTTP em
+                    Node.js é o Express.js. Ele facilita a criação de servidores web, o tratamento de rotas, requisições
+                    e respostas HTTP, além de permitir a construção de APIs de forma simples e eficiente. É atualmente o
+                    framework mais popular do ecossistema Node.js.
+                
+                Exemplo simples usando Express.js:</p><br>
+                <div class="code-example-container">
+            <pre class="code-block"><code>const express = require('express');
+const app = express();
 
+app.get('/', (req, res) => {
+    res.send('Servidor HTTP funcionando com Express!');
+});
+
+app.listen(3000, () => {
+    console.log('Servidor rodando na porta 3000');
+});</code></pre>
+        </div>
+    </div>
+    </div>
 
     <footer>
         <div>

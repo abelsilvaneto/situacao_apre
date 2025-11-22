@@ -85,14 +85,6 @@ nav {
     font-style: italic;
 }
 
-.main-title {
-    font-size: 72px;
-    font-weight: 300;
-    color: #1a1a1a;
-    line-height: 1.2;
-    font-style: italic;
-}
-
 @keyframes float {
 
     0%,
@@ -156,35 +148,12 @@ nav {
     padding: 40px 20px 80px;
 }
 
-.section-title {
-    font-size: 48px;
-    font-weight: 300;
-    color: #1a1a1a;
-    text-align: center;
-    margin-bottom: 60px;
-    font-style: italic;
-}
-
-.components-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 50px;
-    margin-bottom: 80px;
-}
-
-.component-card {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
 .component-title {
     font-size: 42px;
     font-weight: 700;
     color: #1a1a1a;
     text-align: center;
 }
-
 
 .info-box {
     background: rgba(95, 158, 160, 0.6);
@@ -201,8 +170,6 @@ nav {
     line-height: 1.6;
     margin-bottom: 12px;
 }
-
-
 
 .info-box strong {
     font-weight: 700;
@@ -261,8 +228,6 @@ nav {
     text-align: justify;
 }
 
-
-
 .arduino-image-container {
     /* */
     display: flex;
@@ -301,8 +266,6 @@ nav {
     margin-bottom: 20px !important;
 }
 
-
-
 .applications-list li {
     color: #1a1a1a;
     font-size: 16px;
@@ -313,9 +276,6 @@ nav {
     align-items: flex-start;
     gap: 12px;
 }
-
-
-
 
 /* Vantagens e Desvantagens - Arduino */
 .advantages-section {
@@ -337,12 +297,6 @@ nav {
     gap: 25px;
 }
 
-.adv-title {
-    font-size: 52px;
-    font-weight: 700;
-    color: #1a1a1a;
-    text-align: center;
-}
 
 .adv-box {
     background: rgba(95, 158, 160, 0.6);
@@ -390,29 +344,6 @@ nav {
     text-align: center;
 }
 
-
-
-.workflow-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.workflow-card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.workflow-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1a1a1a;
-    text-align: center;
-}
-
 .workflow-box {
     background: rgba(95, 158, 160, 0.6);
     padding: 30px;
@@ -424,10 +355,6 @@ nav {
     justify-content: center;
 }
 
-.workflow-box.bordered {
-    border: 4px solid rgba(100, 100, 180, 0.5);
-}
-
 .workflow-box p {
     color: #1a1a1a;
     font-size: 15px;
@@ -435,40 +362,13 @@ nav {
     margin-bottom: 15px;
 }
 
-
-
-.workflow-intro {
-    font-weight: 600;
-}
-
-.workflow-label {
-    font-weight: 700;
-    margin-top: 10px;
-}
-
 .workflow-footer {
     font-style: italic;
     margin-top: 10px;
 }
 
-.workflow-list {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-.workflow-list li {
-    color: #1a1a1a;
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 8px;
-    padding-left: 20px;
-}
 
 /* Eletrônica Embarcada */
-.embedded-section {
-    margin-top: 80px;
-}
 
 .embedded-definition {
     max-width: 900px;
@@ -490,21 +390,6 @@ nav {
     text-align: justify;
 }
 
-
-.embedded-content-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.embedded-card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .embedded-card.full-width {
     grid-column: 1 / -1;
 }
@@ -516,16 +401,6 @@ nav {
     text-align: left;
 }
 
-.embedded-subtitle.centered {
-    text-align: center;
-}
-
-.embedded-box {
-    background: rgba(95, 158, 160, 0.6);
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
 
 .embedded-box.compact {
     padding: 25px;
@@ -619,11 +494,6 @@ nav {
     text-align: center;
 }
 
-.code-example-container {
-    display: flex;
-    justify-content: center;
-}
-
 .code-block {
     background: #1e1e1e;
     padding: 30px;
@@ -640,7 +510,6 @@ nav {
     line-height: 1.8;
     display: block;
 }
-
 
 footer {
     background-color: #022c39;
