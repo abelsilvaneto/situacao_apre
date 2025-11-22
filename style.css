@@ -375,21 +375,6 @@ nav {
     margin: 0 auto 50px;
 }
 
-.definition-box {
-    background: rgba(95, 158, 160, 0.6);
-    padding: 35px;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.definition-box p {
-    color: #1a1a1a;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
 .embedded-card.full-width {
     grid-column: 1 / -1;
 }
@@ -400,7 +385,6 @@ nav {
     color: #1a1a1a;
     text-align: left;
 }
-
 
 .embedded-box.compact {
     padding: 25px;
@@ -413,18 +397,6 @@ nav {
     margin-bottom: 15px;
 }
 
-.embedded-ordered-list {
-    margin: 15px 0;
-    padding-left: 25px;
-}
-
-.embedded-ordered-list li {
-    color: #1a1a1a;
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 12px;
-}
-
 .embedded-footer {
     color: #1a1a1a;
     font-size: 15px;
@@ -432,15 +404,6 @@ nav {
     margin-top: 15px;
     font-style: italic;
 }
-
-
-.embedded-examples-list li {
-    color: #1a1a1a;
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
 
 .embedded-advantages-grid {
     display: grid;
@@ -454,46 +417,7 @@ nav {
     gap: 20px;
 }
 
-
-.simple-list li {
-    color: #1a1a1a;
-    font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 12px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.simple-list li:before {
-    content: "•";
-    position: absolute;
-    left: 5px;
-    font-weight: 700;
-}
 /* Linguagem de Programação */
-.programming-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.programming-text-box {
-    background: rgba(95, 158, 160, 0.6);
-    padding: 35px;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.programming-text-box p {
-    color: #1a1a1a;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 12px;
-    text-align: center;
-}
-
 .code-block {
     background: #1e1e1e;
     padding: 30px;

@@ -169,7 +169,7 @@
         <div class="advantages-section">
             <div class="arduino-applications">
                 <div class="arduino-info-box">
-                    <div class="code-example-container">
+                    <div class="arduino-info-box">
                         <pre class="code-block"><code>// Ordem crescente de 1 a 20
 let crescente = [];
 for (let i = 1; i <= 20; i++) {
@@ -183,7 +183,58 @@ for (let i = 20; i >= 1; i--) {
 }
 
 console.log("Crescente:", crescente);
-console.log("Decrescente:", decrescente);</code></pre>
+console.log("Decrescente:", decrescente);</code></pre><br>
+                        <pre class="code-block"><code>function converterTemp(valor, unidade) {
+    if (unidade === "C") {
+        return (valor * 9/5) + 32;   // C → F
+    } else if (unidade === "F") {
+        return (valor - 32) * 5/9;   // F → C
+    } else {
+        return "Unidade inválida!";
+    }
+}
+
+// Exemplos:
+console.log(converterTemp(20, "C")); // 68°F
+console.log(converterTemp(68, "F")); // 20°C</code></pre><br>
+                        <pre class="code-block"><code>function calcularIMC(peso, altura) {
+    const imc = peso / (altura * altura);
+    return imc;
+}
+
+// Exemplo de uso:
+console.log(calcularIMC(70, 1.75)); // 22.86</code></pre><br>
+                        <pre class="code-block"><code>function gerarMatriz() {
+    let matriz = [];
+
+    for (let i = 0; i < 3; i++) {
+        let linha = [];
+        for (let j = 0; j < 3; j++) {
+            let numero = Math.floor(Math.random() * 20) + 1; // 1 a 20
+            linha.push(numero);
+        }
+        matriz.push(linha);
+    }
+
+    return matriz;
+}
+
+console.log(gerarMatriz());</code></pre><br>
+<pre class="code-block"><code>function gerarESomar() {
+    let lista = [];
+    let soma = 0;
+
+    for (let i = 0; i < 10; i++) {
+        let num = Math.floor(Math.random() * 220) + 1; // 1 a 220
+        lista.push(num);
+        soma += num;
+    }
+
+    console.log("Números gerados:", lista);
+    console.log("Soma total:", soma);
+}
+
+gerarESomar();</code></pre><br>
                     </div>
                 </div>
             </div>
@@ -193,7 +244,7 @@ console.log("Decrescente:", decrescente);</code></pre>
 
 
 
-    
+
 
 
 
