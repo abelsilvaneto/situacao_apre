@@ -65,6 +65,17 @@ nav {
     overflow: hidden;
 }
 
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;          /* tamanho grande (pode aumentar) */
+    opacity: 0.45;         /* bem suave atrás das letras */
+    transform: translate(-50%, -50%);
+    z-index: 1;            /* fica atrás do texto */
+    pointer-events: none;  /* não atrapalha clique */
+}
+
 .hero.internal {
     min-height: auto;
     padding: 60px 20px 40px;
@@ -276,7 +287,6 @@ nav {
     align-items: flex-start;
     gap: 12px;
 }
-
 /* Vantagens e Desvantagens - Arduino */
 .advantages-section {
     margin-top: 60px;
@@ -296,7 +306,6 @@ nav {
     flex-direction: column;
     gap: 25px;
 }
-
 
 .adv-box {
     background: rgba(95, 158, 160, 0.6);
@@ -322,10 +331,7 @@ nav {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-}
-
-/* Como o Arduino funciona */
-
+}/* Como o Arduino funciona */
 
 .intro-text-box {
     background: rgba(95, 158, 160, 0.6);

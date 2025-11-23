@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script src="./boh.js" defer></script>
-    <link rel="shortcut icon" href="chess_queen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" type="image/png">
+    <link rel="shortcut icon" href="./media/icon.png" type="image/png">
     <title>Fundamentos da Eletroeletrônica</title>
 
 </head>
@@ -140,6 +140,14 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Arduino_Uno_-_R3.jpg/400px-Arduino_Uno_-_R3.jpg"
                             alt="Arduino Uno" class="arduino-img">
                     </div>
+                                       <div class="arduino-image-container">
+                        <img src="./media/arduino_mesa.jpg"
+                            alt="Arduino Uno" class="arduino-img">
+                    </div>
+                                        <div class="arduino-image-container">
+                        <img src="./media/arduino_mesa2.jpg"
+                            alt="Arduino Uno" class="arduino-img">
+                    </div> 
                 </div>
             </div>
 
@@ -365,28 +373,30 @@
         </div>
 
         <div class="arduino-info-box">
-            <pre class="code-block"><code><span>void</span> <span >setup</span>() {
-<span>pinMode</span>(<span>13</span>, <span>OUTPUT</span>); <span>// Define o pino 13 como saída</span>
+            <pre class="code-block"><code>void setup() {
+pinMode(13, OUTPUT); // Define o pino 13 como saída
 }
 
-<span>void</span> <span>loop</span>() {
-<span>digitalWrite</span>(<span>13</span>, <span>HIGH</span>); <span>// Liga o LED</span>
-<span>delay</span>(<span>1000</span>);            <span>// Espera 1 segundo</span>
-<span>digitalWrite</span>(<span>13</span>, <span>LOW</span>);  <span>// Desliga o LED</span>
-<span>delay</span>(<span>1000</span>);            <span>// Espera 1 segundo</span>
+void loop() {
+digitalWrite(13, HIGH); // Liga o LED
+delay(1000);            // Espera 1 segundo
+digitalWrite(13, LOW); // Desliga o LED
+delay(1000);            // Espera 1 segundo
 }</code></pre>
         </div>
     </div>
-    </div>
-    </div><br>
-
+    <br>
+<div class="arduino-image-container">
+                        <img src="./media/arduino_code.jpg"
+                            alt="Arduino Uno" class="arduino-img">
+                    </div> 
     <div class="arduino-card">
         <h2 class="arduino-section-title">O que são entradas e saídas digitais em circuitos integrados como o Arduíno
         </h2>
 
     </div><br><br>
     <div class="embedded-definition">
-        <div class="definition-box">
+        <div class="arduino-info-box">
             <p>Entrada Digital (resumo curto)
 
                 Uma entrada digital é um pino do Arduino usado para ler sinais do ambiente que só podem ter dois
@@ -406,7 +416,7 @@
 
     </div><br><br>
     <div class="embedded-definition">
-        <div class="definition-box">
+        <div class="arduino-info-box">
             <p>Entradas Analógicas
 
                 Entradas analógicas são pinos usados para ler valores que variam continuamente, não apenas
@@ -492,7 +502,7 @@ Pode ter diferentes cores (vermelho, azul, verde, branco) e é usado em indicado
                 <h2 class="arduino-section-title">um programa para leitura de dados de um sensor analógico, acionando saídas digitais.
         </h2>
 
-
+<div class="arduino-info-box">
         <div class="code-example-container">
             <pre class="code-block"><code>const express = require('express')
 const app = express()
@@ -592,8 +602,11 @@ app.listen(PORT, hostname, ()=>{
 })</code></pre>
         </div>
     </div>
-
+</div>
         <footer>
+            <div>
+                <p><strong>2025 ©Abel Company</strong></p>
+            </div>
             <div>
                 <p><strong>FEITO POR:</strong><br>ABEL SILVA NETO</p>
             </div>
@@ -609,6 +622,7 @@ app.listen(PORT, hostname, ()=>{
                     </a>
                 </p>
             </div>
+
         </footer>
 </body>
 

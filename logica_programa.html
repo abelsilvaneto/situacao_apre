@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="chess_queen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" type="image/png">
+    <link rel="shortcut icon" href="./media/icon.png" type="image/png">
     <title>Lógica Computacional</title>
 
 
@@ -241,6 +241,59 @@ gerarESomar();</code></pre><br>
 
         </div>
     </div>
+<pre class="code-block"><code>// Função para gerar 10 números aleatórios de 1 a 20
+function gerarNumeros(qtde) {
+    let lista = []
+    for (let i = 0; i < qtde; i++) {
+        lista.push(Math.floor(Math.random() * 20) + 1)
+    }
+    return lista
+}
+
+// Função Bubble Sort
+function bubbleSort(arr) {
+    for (let j = 0; j < arr.length - 1; j++) {
+        for (let i = 0; i < arr.length - j - 1; i++) {
+
+            if (arr[i] > arr[i + 1]) {
+                // Troca os valores
+                let temp = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = temp
+
+                // Logs para mostrar o que está acontecendo
+                console.log(arr)
+                console.log(`arr[i] = ${arr[i]}`)
+                console.log(`-----------------------`)
+                console.log(`temp (valor trocado) = ${temp}`)
+                console.log(`-----------------------`)
+                console.log(`arr[i+1] = ${arr[i + 1]}`)
+                console.log(`-----------------------`)
+            }
+        }
+    }
+    return arr
+}
+
+function principal() {
+    let arr = gerarNumeros(10) // 10 números aleatórios de 1 a 20
+    console.log("Lista gerada:")
+    console.log(arr)
+    console.log("===============")
+
+    let ordenado = bubbleSort(arr)
+
+    console.log("Lista ordenada:")
+    console.log(ordenado)
+}
+
+principal()</code></pre><br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -250,6 +303,9 @@ gerarESomar();</code></pre><br>
 
 
     <footer>
+                    <div>
+                <p><strong>2025 ©Abel Company</strong></p>
+            </div>
         <div>
             <p><strong>FEITO POR:</strong><br>ABEL SILVA NETO</p>
         </div>
