@@ -184,105 +184,195 @@ for (let i = 20; i >= 1; i--) {
 
 console.log("Crescente:", crescente);
 console.log("Decrescente:", decrescente);</code></pre><br>
-                        <pre class="code-block"><code>function converterTemp(valor, unidade) {
+                        <pre class="code-block"><code>// Função para converter temperaturas entre Celsius e Fahrenheit
+function converterTemp(valor, unidade) {
+
+    // Se a unidade informada for Celsius ("C")
     if (unidade === "C") {
-        return (valor * 9/5) + 32;   // C → F
+        // Converte de Celsius para Fahrenheit usando a fórmula:
+        // F = (C × 9/5) + 32
+        return (valor * 9/5) + 32;
+
+    // Se a unidade informada for Fahrenheit ("F")
     } else if (unidade === "F") {
-        return (valor - 32) * 5/9;   // F → C
+        // Converte de Fahrenheit para Celsius usando:
+        // C = (F − 32) × 5/9
+        return (valor - 32) * 5/9;
+
+    // Caso a unidade não seja "C" nem "F"
     } else {
         return "Unidade inválida!";
     }
 }
 
-// Exemplos:
+// Exemplos de uso da função:
+
+// Converte 20°C → Fahrenheit
 console.log(converterTemp(20, "C")); // 68°F
+
+// Converte 68°F → Celsius
 console.log(converterTemp(68, "F")); // 20°C</code></pre><br>
-                        <pre class="code-block"><code>function calcularIMC(peso, altura) {
+                        <pre class="code-block"><code>// Função para calcular o IMC de uma pessoa
+function calcularIMC(peso, altura) {
+
+    // Fórmula do IMC: peso dividido pela altura ao quadrado
     const imc = peso / (altura * altura);
-    return imc;
+
+    return imc; // Retorna o valor calculado
 }
 
-// Exemplo de uso:
+// Exemplo de uso da função:
+// Peso: 70 kg
+// Altura: 1.75 m
+// Deve resultar aproximadamente em 22.86
 console.log(calcularIMC(70, 1.75)); // 22.86</code></pre><br>
-                        <pre class="code-block"><code>function gerarMatriz() {
-    let matriz = [];
+                        <pre class="code-block"><code>// Função para gerar uma matriz 3x3 com números aleatórios de 1 a 20
+function gerarMatriz() {
 
+    let matriz = []; // Array principal que vai armazenar as 3 linhas
+
+    // Laço externo: controla as 3 linhas da matriz
     for (let i = 0; i < 3; i++) {
-        let linha = [];
+
+        let linha = []; // Cria uma nova linha vazia
+
+        // Laço interno: controla as 3 colunas da matriz
         for (let j = 0; j < 3; j++) {
-            let numero = Math.floor(Math.random() * 20) + 1; // 1 a 20
-            linha.push(numero);
+
+            // Gera um número aleatório entre 1 e 20
+            let numero = Math.floor(Math.random() * 20) + 1;
+
+            linha.push(numero); // Coloca o número dentro da linha
         }
-        matriz.push(linha);
+
+        matriz.push(linha); // Adiciona a linha completa dentro da matriz
     }
 
-    return matriz;
+    return matriz; // Retorna a matriz final com 3 linhas e 3 colunas
 }
 
+// Exibe a matriz gerada no console
 console.log(gerarMatriz());</code></pre><br>
-<pre class="code-block"><code>function gerarESomar() {
-    let lista = [];
-    let soma = 0;
+                        <pre class="code-block"><code>// Função que gera 10 números aleatórios (1 a 220) e soma todos eles
+function gerarESomar() {
 
+    let lista = []; // Array para armazenar os números gerados
+    let soma = 0;   // Variável onde será acumulada a soma dos números
+
+    // Laço que gera 10 números aleatórios
     for (let i = 0; i < 10; i++) {
-        let num = Math.floor(Math.random() * 220) + 1; // 1 a 220
-        lista.push(num);
-        soma += num;
+
+        // Gera um número inteiro de 1 a 220
+        let num = Math.floor(Math.random() * 220) + 1;
+
+        lista.push(num); // Coloca o número dentro do array
+        soma += num;     // Soma o número ao total acumulado
     }
 
+    // Exibe no console a lista completa de números gerados
     console.log("Números gerados:", lista);
+
+    // Exibe no console o valor total da soma
     console.log("Soma total:", soma);
 }
 
+// Chamada da função para executar o processo
 gerarESomar();</code></pre><br>
 
-<pre class="code-block"><code>// Função para gerar 10 números aleatórios de 1 a 20
+                        <pre class="code-block"><code>// Função para gerar 'qtde' números aleatórios de 1 a 20
 function gerarNumeros(qtde) {
-    let lista = []
+    let lista = [] // Array onde os números serão armazenados
+
+    // Laço para gerar cada número
     for (let i = 0; i < qtde; i++) {
+        // Gera número aleatório entre 1 e 20
         lista.push(Math.floor(Math.random() * 20) + 1)
     }
-    return lista
+
+    return lista // Retorna o array pronto
 }
 
-// Função Bubble Sort
+// Função Bubble Sort para ordenar um array
 function bubbleSort(arr) {
+
+    // Primeiro laço controla quantas "passadas" serão feitas
     for (let j = 0; j < arr.length - 1; j++) {
+
+        // Segundo laço percorre o array comparando elementos vizinhos
         for (let i = 0; i < arr.length - j - 1; i++) {
 
-            if (arr[i] > arr[i + 1]) {
-                // Troca os valores
-                let temp = arr[i]
-                arr[i] = arr[i + 1]
-                arr[i + 1] = temp
+        // Verifica se o elemento atual é maior que o próximo
+        if (arr[i] > arr[i + 1]) {
 
-                // Logs para mostrar o que está acontecendo
-                console.log(arr)
-                console.log(`arr[i] = ${arr[i]}`)
-                console.log(`-----------------------`)
-                console.log(`temp (valor trocado) = ${temp}`)
-                console.log(`-----------------------`)
-                console.log(`arr[i+1] = ${arr[i + 1]}`)
-                console.log(`-----------------------`)
-            }
+        // Guarda o valor atual em uma variável temporária
+        let temp = arr[i]
+
+        // Troca os valores de posição
+        arr[i] = arr[i + 1]
+        arr[i + 1] = temp
+
+        // Logs para mostrar cada troca ocorrendo
+        console.log(arr) // mostra o array após a troca
+        console.log(`arr[i] = ${arr[i]}`) // novo valor em arr[i]
+        console.log(`-----------------------`)
+        console.log(`temp (valor trocado) = ${temp}`) // valor que estava antes
+        console.log(`-----------------------`)
+        console.log(`arr[i+1] = ${arr[i + 1]}`) // novo valor em arr[i+1]
+        console.log(`-----------------------`)
         }
     }
-    return arr
 }
 
+    return arr // Retorna o array ordenado
+}
+
+// Função principal do programa
 function principal() {
-    let arr = gerarNumeros(10) // 10 números aleatórios de 1 a 20
+
+    // Gera um array com 10 números aleatórios de 1 a 20
+    let arr = gerarNumeros(10)
+
+    // Exibe a lista original no console
     console.log("Lista gerada:")
     console.log(arr)
     console.log("===============")
 
+    // Ordena a lista usando Bubble Sort
     let ordenado = bubbleSort(arr)
 
+    // Exibe a lista já ordenada
     console.log("Lista ordenada:")
     console.log(ordenado)
 }
 
+// Chama a função principal para iniciar o programa
 principal()</code></pre><br>
+                        <pre class="code-block"><code>function buscaLinear(lista, valorProcurado) {
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i] === valorProcurado) {
+            return i; // retorna a posição onde encontrou
+        }
+    }
+    return -1; // se não encontrar
+}
+
+// Exemplo de uso:
+let numeros = [4, 8, 15, 16, 23, 42];
+let pos = buscaLinear(numeros, 16);
+
+console.log("Posição encontrada:", pos); // saída: 3
+</code></pre><br>
+
+                        <p class="intro-text">A busca linear é o método mais simples para procurar um valor dentro de
+                            uma lista ou array. Ela funciona percorrendo os elementos um por um, começando na primeira
+                            posição e indo até a última, comparando cada item da lista com o valor procurado. Se
+                            encontrar uma correspondência, retorna a posição do elemento; caso percorra toda a lista sem
+                            encontrar, retorna –1 indicando que o valor não existe ali. <br>
+
+                            Esse método é muito fácil de entender e implementar, por isso é bastante usado em listas
+                            pequenas ou quando não há garantia de ordenação. Entretanto, em listas grandes ele pode ser
+                            lento, pois no pior caso precisa verificar todos os elementos, resultando em uma
+                            complexidade O(n).p>
                     </div>
                 </div>
             </div>
@@ -298,9 +388,9 @@ principal()</code></pre><br>
 
 
     <footer>
-                    <div>
-                <p><strong>2025 ©Abel Company</strong></p>
-            </div>
+        <div>
+            <p><strong>2025 ©Abel Company</strong></p>
+        </div>
         <div>
             <p><strong>FEITO POR:</strong><br>ABEL SILVA NETO</p>
         </div>
