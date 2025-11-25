@@ -256,6 +256,15 @@ nav {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.code-img {
+    /* */
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 .arduino-applications {
     display: flex;
     justify-content: center;

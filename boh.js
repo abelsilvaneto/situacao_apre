@@ -51,3 +51,24 @@
             res.innerHTML = "Preencha dois valores para calcular a potência!";
         }
     }
+
+    function gravarDados() {
+        let nome = (document.getElementById("nome").value);
+        let email = (document.getElementById("email").value);
+        let idade = (document.getElementById("idade").value);
+        
+        let res = document.getElementById("res");
+
+
+        res.innerHTML = ""
+        // Verifica se está vazio
+        if (nome === "" || email === "" || idade === "") {
+            res.innerHTML += "Preencha todos os campos!"
+        }else {        res.innerHTML += `
+            <h3>Dados Gravados:</h3>
+            <p><strong>Nome:</strong> ${nome}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Idade:</strong> ${idade}</p>
+        `;
+    }
+    }
