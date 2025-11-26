@@ -96,17 +96,7 @@ nav {
     font-style: italic;
 }
 
-@keyframes float {
 
-    0%,
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    50% {
-        transform: translate(50px, 50px) scale(1.1);
-    }
-}
 
 /* Seção Sobre - Página Principal */
 .about-section {

@@ -668,8 +668,140 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
-});</code></pre>
+});</code></pre><br>
         
+    </div>
+    </div>
+    </div><br>
+
+    <div class="programming-content">
+        <h2 class="arduino-section-title">3 exemplos de código Backend para troca de mensagens entre front e backend.
+        </h2><br><br>
+        <div class="arduino-info-box">
+            <div class="code-example-container">
+            <pre class="code-block"><code>const express = require('express')
+                const app = express()
+                
+                const cors = require('cors')
+                
+                // PORT do TCP
+                const PORT = 3000 
+                
+                // endereço IP = 127.0.0.1 do servidor de teste
+                const hostname = 'localhost' 
+                
+                // ------------ Middleware ---------------------
+                app.use(express.urlencoded({extended: true}))
+                app.use(express.json())
+                app.use(cors())
+                // ---------------------------------------------
+                
+                app.get('/', (req,res)=>{
+                    res.status(200).json({message: 'Aplicação Rodando!'})
+                })
+                
+                app.get('/login', (req,res)=>{
+                    const email_bd = 'carlos@gmail.com'
+                    const senha_bd = 123
+                
+                    const dados = {
+                        email: email_bd,
+                        senha: senha_bd
+                    }
+                
+                    res.status(200).json(dados)
+                })
+                
+                app.post('/login', (req,res)=>{
+                    const email_bd = 'carlos@gmail.com'
+                    const senha_bd = 123
+                
+                    const valores = req.body
+                
+                    console.log(valores)
+                
+                    if(email_bd === valores.email){
+                        if(senha_bd === valores.senha){
+                            return res.status(200).json({ 
+                                message: 'login realizado com sucesso!', 
+                                nome: valores.nome, 
+                                statusLog: 'true'
+                            })
+                        }else{
+                            return res.status(403).json({ message: 'Acesso não autorizado!'})
+                        }
+                    }else{
+                        return res.status(404).json({message: 'Usuário não encontrado'})
+                    }
+                    
+                })
+                
+                // ---------------- Server ---------------------
+                app.listen(PORT, hostname, ()=>{
+                    console.log(`http://${hostname}:${PORT}`)
+                })</code></pre><br>
+                <pre class="code-block"><code>const express = require('express')
+                    const app = express()
+                    const cors = require('cors')
+                    
+                    const PORT = 3000
+                    const hostname = 'localhost' // ip = 127.0.0.1 - servidor de teste
+                    
+                    // ------- config middleware -----------------
+                    app.use(express.urlencoded({extended: true}))
+                    app.use(express.json())
+                    app.use(cors())
+                    // -------------------------------------------
+                    
+                    app.post('/usuario', (req,res)=>{
+                        const dados = req.body
+                        console.log('nome:', dados)
+                        res.status(200).json({message: 'dados recebidos ', dados})
+                    })
+                    
+                    app.get('/', (req,res)=>{
+                        res.status(200).json({message: 'Olá mundo!'})
+                    })
+                    
+                    // ------------- Server ----------------------
+                    app.listen(PORT, hostname, ()=>{
+                        console.log(`Servidor rodando em http://${hostname}:${PORT}`)
+                    })</code></pre><br>
+                    <pre class="code-block"><code>const express = require('express')
+                        const app = express()
+                        const cors = require('cors')
+                        
+                        const PORT = 3000 // endereço TCP
+                        const hostname = 'localhost' // 127.0.0.1 endereço IP
+                        
+                        // --------- middleware ------------------------
+                        app.use(express.urlencoded({extended: true}))
+                        app.use(express.json())
+                        app.use(cors())
+                        // ---------------------------------------------
+                        
+                        
+                        app.get('/', (req,res)=>{
+                            res.status(200).json({message: 'aplicação rodando'})
+                        })
+                        app.get('/teste', (req,res)=>{
+                            const nome = 'Ueslei' 
+                            res.status(200).json({message: 'mensagem do nome:', nome})
+                        })
+                        
+                        app.post('/usuario', (req,res)=>{
+                            const valores = req.body
+                            console.log(valores)
+                        
+                            res.status(200).json({message: 'dados recebidos!'})
+                        })
+                        
+                        // --------------------------------------------
+                        app.listen(PORT,hostname, ()=>{
+                            console.log(`Servidor http://${hostname}:${PORT}`)
+                        })</code></pre><br>
+        
+    </div>
     </div>
     </div>
 
