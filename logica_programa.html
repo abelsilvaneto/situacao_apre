@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./media/icon_terra.png" type="image/png">
+    <script src="boh.js"defer></script>
     <title>Lógica Computacional</title>
 
 
@@ -161,98 +162,79 @@
             </div>
         </div>
     </div>
-    <div class="hero internal">
-        <h1 class="title">Códigos que fazemos</h1>
-    </div>
+
+
+    <div class="arduino-card">
+        <h2 class="arduino-section-title">Ordem crescente de 1 a 20
+        </h2>
+        <div class="embedded-definition">
+            <div class="workflow-box">
+                <input id="ordem" type="text" placeholder="Crescente ou Decrescente:"><br>
+                <button onclick="ver()">ver</button>
+                
+                <div id="res" style="margin-top: 15px; font-size: 18px;"></div>
+            </div>
+        </div><br>
+
+        <div class="arduino-section-title">
+            <h1 class="title">converter temperaturas entre Celsius e Fahrenheit</h1>
+        </div>
+
+        <div class="embedded-definition">
+            <div class="workflow-box">
+                <input id="c" type="number" placeholder="Celsius:"><br>
+                <input id="f" type="number" placeholder="Fahrenheit:"><br>
+
+                <button onclick="calcularTEMPERATURA()">Calcular</button>
+                
+                <div id="res2" style="margin-top: 15px; font-size: 18px;"></div>
+            </div>
+        </div>
+
+        <div class="arduino-section-title">
+            <h1 class="title">calcular o IMC de uma pessoa</h1>
+        </div>
+
+        <div class="embedded-definition">
+            <div class="workflow-box">
+                <input id="altura" type="number" placeholder="Altura:"><br>
+                <input id="peso" type="number" placeholder="peso:"><br>
+
+                <button onclick="calcularIMC()">Calcular</button>
+                
+                <div id="res3" style="margin-top: 15px; font-size: 18px;"></div>
+            </div>
+        </div>
+
+        <div class="arduino-section-title">
+            <h1 class="title">gerar uma matriz 3x3 com números aleatórios de 1 a 20</h1>
+        </div>
+
+        <div class="embedded-definition">
+            <div class="workflow-box">
+                <button onclick="gera()">gera</button>
+                
+                <div id="res4" style="margin-top: 15px; font-size: 18px;"></div>
+            </div>
+        </div>
+
+        <div class="arduino-section-title">
+            <h1 class="title">gera 10 números aleatórios (1 a 220) e soma todos eles</h1>
+        </div>
+
+        <div class="embedded-definition">
+            <div class="workflow-box">
+                <button onclick="geraesoma()">Gera e soma</button>
+                
+                <div id="res5" style="margin-top: 15px; font-size: 18px;"></div>
+            </div>
+        </div>
 
     <div class="content-section">
         <div class="advantages-section">
             <div class="arduino-applications">
                 <div class="arduino-info-box">
                     <div class="arduino-info-box">
-                        <pre class="code-block"><code>// Ordem crescente de 1 a 20
-let crescente = [];
-for (let i = 1; i <= 20; i++) {
-    crescente.push(i);
-}
-
-// Ordem decrescente de 20 a 1
-let decrescente = [];
-for (let i = 20; i >= 1; i--) {
-    decrescente.push(i);
-}
-
-console.log("Crescente:", crescente);
-console.log("Decrescente:", decrescente);</code></pre><br>
-                        <pre class="code-block"><code>// Função para converter temperaturas entre Celsius e Fahrenheit
-function converterTemp(valor, unidade) {
-
-    // Se a unidade informada for Celsius ("C")
-    if (unidade === "C") {
-        // Converte de Celsius para Fahrenheit usando a fórmula:
-        // F = (C × 9/5) + 32
-        return (valor * 9/5) + 32;
-
-    // Se a unidade informada for Fahrenheit ("F")
-    } else if (unidade === "F") {
-        // Converte de Fahrenheit para Celsius usando:
-        // C = (F − 32) × 5/9
-        return (valor - 32) * 5/9;
-
-    // Caso a unidade não seja "C" nem "F"
-    } else {
-        return "Unidade inválida!";
-    }
-}
-
-// Exemplos de uso da função:
-
-// Converte 20°C → Fahrenheit
-console.log(converterTemp(20, "C")); // 68°F
-
-// Converte 68°F → Celsius
-console.log(converterTemp(68, "F")); // 20°C</code></pre><br>
-                        <pre class="code-block"><code>// Função para calcular o IMC de uma pessoa
-function calcularIMC(peso, altura) {
-
-    // Fórmula do IMC: peso dividido pela altura ao quadrado
-    const imc = peso / (altura * altura);
-
-    return imc; // Retorna o valor calculado
-}
-
-// Exemplo de uso da função:
-// Peso: 70 kg
-// Altura: 1.75 m
-// Deve resultar aproximadamente em 22.86
-console.log(calcularIMC(70, 1.75)); // 22.86</code></pre><br>
-                        <pre class="code-block"><code>// Função para gerar uma matriz 3x3 com números aleatórios de 1 a 20
-function gerarMatriz() {
-
-    let matriz = []; // Array principal que vai armazenar as 3 linhas
-
-    // Laço externo: controla as 3 linhas da matriz
-    for (let i = 0; i < 3; i++) {
-
-        let linha = []; // Cria uma nova linha vazia
-
-        // Laço interno: controla as 3 colunas da matriz
-        for (let j = 0; j < 3; j++) {
-
-            // Gera um número aleatório entre 1 e 20
-            let numero = Math.floor(Math.random() * 20) + 1;
-
-            linha.push(numero); // Coloca o número dentro da linha
-        }
-
-        matriz.push(linha); // Adiciona a linha completa dentro da matriz
-    }
-
-    return matriz; // Retorna a matriz final com 3 linhas e 3 colunas
-}
-
-// Exibe a matriz gerada no console
-console.log(gerarMatriz());</code></pre><br>
                         <pre class="code-block"><code>// Função que gera 10 números aleatórios (1 a 220) e soma todos eles
 function gerarESomar() {
 
