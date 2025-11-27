@@ -63,6 +63,9 @@
         
         let res = document.getElementById("res")
 
+        let arrN = []
+        let arrE = []
+        let arrI = []
 
         res.innerHTML = ""
         // Verifica se está vazio
