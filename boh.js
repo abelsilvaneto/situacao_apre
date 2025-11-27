@@ -177,8 +177,7 @@ const imc = peso / (altura * altura);
             res.innerHTML += `<p>Classificação: Obesidade grau II</p>`;
         }
         else if(imc >= 40){
-            res.innerHTML += `<p>DAMNNNNNNNNNNNNN!!!!!!!!!!!!!!!!!!!!!</p>
-            <img src="https://media.tenor.com/3jVJyutajMAAAAAM/meme-funny.gif" style="height: 100vh;" style="width: 100vw;"></img>`;
+            res.innerHTML += `<p>Classificação: obesidade graus III</p>`
         }
 
         else {
