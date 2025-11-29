@@ -63,14 +63,13 @@
         
         let res = document.getElementById("res")
 
-        let arrN = []
-        let arrE = []
-        let arrI = []
+        let cadastros = [];
 
         res.innerHTML = ""
         // Verifica se está vazio
         if (nome === "" || email === "" || idade === "") {
             res.innerHTML += "Preencha todos os campos!"
+            return 
         }else {        
             res.innerHTML += `
             <h3>Dados Gravados:</h3>
@@ -78,6 +77,8 @@
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Idade:</strong> ${idade}</p>
         `;
+        cadastros.push({nome: nome, email: email, idade: idade});
+        console.log(cadastros)
     }
     }
 
@@ -114,7 +115,7 @@ console.log(ordem)
         res.innerHTML += `${i} `
             }
         }else{
-            res.innerHTML += "Digite d para descrescente e c para crescente!"
+            res.innerHTML += "Digite d para descrescente ou c para crescente!"
         }
     }
 
@@ -209,7 +210,7 @@ const imc = peso / (altura * altura);
             matriz.push(linha); // Adiciona a linha completa dentro da matriz
         }
     
-        return matriz; // Retorna a matriz final com 3 linhas e 3 colunas
+        res.innerHTML += `${matriz}` // Retorna a matriz final com 3 linhas e 3 colunas
     }
     
 
@@ -242,3 +243,79 @@ const imc = peso / (altura * altura);
     res.innerHTML += `Soma total: ${soma} `;
 
     }
+
+    // Função para gerar 'qtde' números aleatórios de 1 a 20
+function gerarNumeros(qtde) {
+
+
+    let lista = [] // Array onde os números serão armazenados
+
+    // Laço para gerar cada número
+    for (let i = 0; i < qtde; i++) {
+        // Gera número aleatório entre 1 e 20
+        lista.push(Math.floor(Math.random() * 20) + 1)
+    }
+
+    return lista // Retorna o array pronto
+}
+
+// Função Bubble Sort para ordenar um array
+function bubbleSort(arr) {
+
+     let res = document.getElementById("res6");
+
+    res.innerHTML = ""
+
+    // Primeiro laço controla quantas "passadas" serão feitas
+    for (let j = 0; j < arr.length - 1; j++) {
+
+        // Segundo laço percorre o array comparando elementos vizinhos
+        for (let i = 0; i < arr.length - j - 1; i++) {
+
+        // Verifica se o elemento atual é maior que o próximo
+        if (arr[i] > arr[i + 1]) {
+
+        // Guarda o valor atual em uma variável temporária
+        let temp = arr[i]
+
+        // Troca os valores de posição
+        arr[i] = arr[i + 1]
+        arr[i + 1] = temp
+
+        // Logs para mostrar cada troca ocorrendo
+        console.log(arr) // mostra o array após a troca
+        console.log(`arr[i] = ${arr[i]}`) // novo valor em arr[i]
+        console.log(`-----------------------`)
+        console.log(`temp (valor trocado) = ${temp}`) // valor que estava antes
+        console.log(`-----------------------`)
+        console.log(`arr[i+1] = ${arr[i + 1]}`) // novo valor em arr[i+1]
+        console.log(`-----------------------`)
+        }
+    }
+}
+
+    return arr // Retorna o array ordenado
+}
+
+// Função principal do programa
+function principal() {
+
+     let res = document.getElementById("res6");
+
+    res.innerHTML = ""
+
+    // Gera um array com 10 números aleatórios de 1 a 20
+    let arr = gerarNumeros(10)
+
+    // Exibe a lista original no console
+    
+    res.innerHTML += `Números gerados: ${arr} `;
+    
+
+    // Ordena a lista usando Bubble Sort
+    let ordenado = bubbleSort(arr)
+
+    // Exibe a lista já ordenada
+    res.innerHTML += `Números ordenados: ${ordenado} `;
+}
+

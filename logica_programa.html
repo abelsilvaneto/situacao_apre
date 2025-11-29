@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./media/icon_terra.png" type="image/png">
     <script src="boh.js"defer></script>
-    <title>Lógica Computacional</title>
+    <title>Lógica de programação</title>
 
 
 </head>
@@ -15,9 +15,9 @@
     <nav>
         <div class="nav-container">
             <a href="./index.html" class="nav-link">Home</a>
-            <a href="./Fundamentos_banco.html" class="nav-link">Fundamentos de<br>Bancos de Dados</a>
+            <a href="./Fundamentos_banco.html" class="nav-link">Bancos de Dados</a>
             <a href="./Logica_Computacional.html" class="nav-link">Lógica<br>Computacional</a>
-            <a href="./funda_eletro.html" class="nav-link">Fundamentos da<br>Eletroeletrônica</a>
+            <a href="./funda_eletro.html" class="nav-link">componentes</a>
             <a href="./Fundamentos_Redes.html" class="nav-link">Fundamentos<br>de Redes</a>
             <a href="./Fundamentos_tecnologia.html" class="nav-link">Fundamentos da<br>Tecnologia da Informação</a>
         </div>
@@ -26,7 +26,7 @@
     <div class="hero"><br>
 
         <br>
-        <h1 class="title">Lógica<br>de Programação</h1>
+        <h1 class="title">Serviços de programação</h1>
     </div>
 
     <div class="content-section">
@@ -212,7 +212,7 @@
 
         <div class="embedded-definition">
             <div class="workflow-box">
-                <button onclick="gera()">gera</button>
+                <button onclick="gera()">gerar</button>
                 
                 <div id="res4" style="margin-top: 15px; font-size: 18px;"></div>
             </div>
@@ -230,36 +230,26 @@
             </div>
         </div>
 
+                <div class="arduino-section-title">
+            <h1 class="title">gerar e ordenar números aleatórios de 1 a 20 (com bubleSort).</h1>
+        </div>
+
+        <div class="embedded-definition">
+            <div class="workflow-box">
+                <input id="altura" type="number" placeholder="Altura:"><br>
+                <input id="peso" type="number" placeholder="peso:"><br>
+
+                <button onclick="gerar()">Gerar</button>
+                
+                <div id="res6" style="margin-top: 15px; font-size: 18px;"></div>
+            </div>
+        </div>
+
     <div class="content-section">
         <div class="advantages-section">
             <div class="arduino-applications">
                 <div class="arduino-info-box">
                     <div class="arduino-info-box">
-                        <pre class="code-block"><code>// Função que gera 10 números aleatórios (1 a 220) e soma todos eles
-function gerarESomar() {
-
-    let lista = []; // Array para armazenar os números gerados
-    let soma = 0;   // Variável onde será acumulada a soma dos números
-
-    // Laço que gera 10 números aleatórios
-    for (let i = 0; i < 10; i++) {
-
-        // Gera um número inteiro de 1 a 220
-        let num = Math.floor(Math.random() * 220) + 1;
-
-        lista.push(num); // Coloca o número dentro do array
-        soma += num;     // Soma o número ao total acumulado
-    }
-
-    // Exibe no console a lista completa de números gerados
-    console.log("Números gerados:", lista);
-
-    // Exibe no console o valor total da soma
-    console.log("Soma total:", soma);
-}
-
-// Chamada da função para executar o processo
-gerarESomar();</code></pre><br>
 
                         <pre class="code-block"><code>// Função para gerar 'qtde' números aleatórios de 1 a 20
 function gerarNumeros(qtde) {

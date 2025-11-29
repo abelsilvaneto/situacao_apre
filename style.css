@@ -65,19 +65,12 @@ nav {
     overflow: hidden;
 }
 
-.hero_logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(38vh - 30px);
-    overflow: hidden;
-}
-
 .logo{
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    width: 1000px;          /* tamanho grande (pode aumentar) */
+    width: 800px;          /* tamanho grande (pode aumentar) */
+    opacity: 0.45;         /* bem suave atrás das letras */
     transform: translate(-50%, -50%);
     z-index: 1;            /* fica atrás do texto */
     pointer-events: none;  /* não atrapalha clique */
@@ -103,7 +96,17 @@ nav {
     font-style: italic;
 }
 
+@keyframes float {
 
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
+}
 
 /* Seção Sobre - Página Principal */
 .about-section {
