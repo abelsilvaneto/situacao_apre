@@ -298,19 +298,14 @@ function bubbleSort(arr) {
 }
 
 // Função principal do programa
-function principal() {
+function gerarBOB() {
 
      let res = document.getElementById("res6");
 
     res.innerHTML = ""
 
     // Gera um array com 10 números aleatórios de 1 a 20
-    let arr = gerarNumeros(10)
-
-    // Exibe a lista original no console
-    
-    res.innerHTML += `Números gerados: ${arr} `;
-    
+    let arr = gerarNumeros(10)    
 
     // Ordena a lista usando Bubble Sort
     let ordenado = bubbleSort(arr)

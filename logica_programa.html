@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./media/icon_terra.png" type="image/png">
     <script src="boh.js"defer></script>
+    <script src="boh2.js"defer></script>
     <title>Lógica de programação</title>
 
 
@@ -17,8 +18,8 @@
             <a href="./index.html" class="nav-link">Home</a>
             <a href="./Fundamentos_banco.html" class="nav-link">Bancos de Dados</a>
             <a href="./Logica_Computacional.html" class="nav-link">Lógica<br>Computacional</a>
-            <a href="./funda_eletro.html" class="nav-link">componentes</a>
-            <a href="./Fundamentos_Redes.html" class="nav-link">Fundamentos<br>de Redes</a>
+            <a href="./funda_eletro.html" class="nav-link">Componentes eletrônicos</a>
+            <a href="./Fundamentos_Redes.html" class="nav-link">Componentes<br>de Redes</a>
             <a href="./Fundamentos_tecnologia.html" class="nav-link">Fundamentos da<br>Tecnologia da Informação</a>
         </div>
     </nav>
@@ -236,105 +237,31 @@
 
         <div class="embedded-definition">
             <div class="workflow-box">
-                <input id="altura" type="number" placeholder="Altura:"><br>
-                <input id="peso" type="number" placeholder="peso:"><br>
 
-                <button onclick="gerar()">Gerar</button>
+                <button onclick="gerarBOB()">Gerar</button>
                 
                 <div id="res6" style="margin-top: 15px; font-size: 18px;"></div>
+            </div>
+        </div>
+
+                        <div class="arduino-section-title">
+            <h1 class="title">script de busca linear</h1>
+        </div>
+
+        <div class="embedded-definition">
+            <div class="workflow-box">
+
+                <input type="number" id="valor" placeholder="Digite um número"><br>
+                <button onclick="buscaLinear()">Busca</button>
+                
+                <div id="res7" style="margin-top: 15px; font-size: 18px;"></div>
             </div>
         </div>
 
     <div class="content-section">
         <div class="advantages-section">
             <div class="arduino-applications">
-                <div class="arduino-info-box">
                     <div class="arduino-info-box">
-
-                        <pre class="code-block"><code>// Função para gerar 'qtde' números aleatórios de 1 a 20
-function gerarNumeros(qtde) {
-    let lista = [] // Array onde os números serão armazenados
-
-    // Laço para gerar cada número
-    for (let i = 0; i < qtde; i++) {
-        // Gera número aleatório entre 1 e 20
-        lista.push(Math.floor(Math.random() * 20) + 1)
-    }
-
-    return lista // Retorna o array pronto
-}
-
-// Função Bubble Sort para ordenar um array
-function bubbleSort(arr) {
-
-    // Primeiro laço controla quantas "passadas" serão feitas
-    for (let j = 0; j < arr.length - 1; j++) {
-
-        // Segundo laço percorre o array comparando elementos vizinhos
-        for (let i = 0; i < arr.length - j - 1; i++) {
-
-        // Verifica se o elemento atual é maior que o próximo
-        if (arr[i] > arr[i + 1]) {
-
-        // Guarda o valor atual em uma variável temporária
-        let temp = arr[i]
-
-        // Troca os valores de posição
-        arr[i] = arr[i + 1]
-        arr[i + 1] = temp
-
-        // Logs para mostrar cada troca ocorrendo
-        console.log(arr) // mostra o array após a troca
-        console.log(`arr[i] = ${arr[i]}`) // novo valor em arr[i]
-        console.log(`-----------------------`)
-        console.log(`temp (valor trocado) = ${temp}`) // valor que estava antes
-        console.log(`-----------------------`)
-        console.log(`arr[i+1] = ${arr[i + 1]}`) // novo valor em arr[i+1]
-        console.log(`-----------------------`)
-        }
-    }
-}
-
-    return arr // Retorna o array ordenado
-}
-
-// Função principal do programa
-function principal() {
-
-    // Gera um array com 10 números aleatórios de 1 a 20
-    let arr = gerarNumeros(10)
-
-    // Exibe a lista original no console
-    console.log("Lista gerada:")
-    console.log(arr)
-    console.log("===============")
-
-    // Ordena a lista usando Bubble Sort
-    let ordenado = bubbleSort(arr)
-
-    // Exibe a lista já ordenada
-    console.log("Lista ordenada:")
-    console.log(ordenado)
-}
-
-// Chama a função principal para iniciar o programa
-principal()</code></pre><br>
-                        <pre class="code-block"><code>function buscaLinear(lista, valorProcurado) {
-    for (let i = 0; i < lista.length; i++) {
-        if (lista[i] === valorProcurado) {
-            return i; // retorna a posição onde encontrou
-        }
-    }
-    return -1; // se não encontrar
-}
-
-// Exemplo de uso:
-let numeros = [4, 8, 15, 16, 23, 42];
-let pos = buscaLinear(numeros, 16);
-
-console.log("Posição encontrada:", pos); // saída: 3
-</code></pre><br>
-
                         <p class="intro-text">A busca linear é o método mais simples para procurar um valor dentro de
                             uma lista ou array. Ela funciona percorrendo os elementos um por um, começando na primeira
                             posição e indo até a última, comparando cada item da lista com o valor procurado. Se
@@ -344,7 +271,7 @@ console.log("Posição encontrada:", pos); // saída: 3
                             Esse método é muito fácil de entender e implementar, por isso é bastante usado em listas
                             pequenas ou quando não há garantia de ordenação. Entretanto, em listas grandes ele pode ser
                             lento, pois no pior caso precisa verificar todos os elementos, resultando em uma
-                            complexidade O(n).p>
+                            complexidade O(n).</p>
                     </div>
                 </div>
             </div>
