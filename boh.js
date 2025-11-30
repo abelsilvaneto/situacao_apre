@@ -186,32 +186,40 @@ const imc = peso / (altura * altura);
         }
     }
 
-    function gera(){
+function gera() {
 
-        let res = document.getElementById("res4");
+    let res = document.getElementById("res4");
 
-        res.innerHTML = ""
-        let matriz = [[]]; // Array principal que vai armazenar as 3 linhas
+    res.innerHTML = "";
+    let matriz = []; // Matriz principal
 
-        // Laço externo: controla as 3 linhas da matriz
-        for (let i = 0; i < 3; i++) {
-    
-            matriz = []; // Cria uma nova linha vazia
-    
-            // Laço interno: controla as 3 colunas da matriz
-            for (let j = 0; j < 3; j++) {
-    
-                // Gera um número aleatório entre 1 e 20
-                let numero = Math.floor(Math.random() * 20) + 1;
-    
-                linha.push(numero); // Coloca o número dentro da linha
-            }
-    
-            matriz.push(linha); // Adiciona a linha completa dentro da matriz
+    // 3 linhas
+    for (let i = 0; i < 3; i++) {
+
+        let linha = []; // Cria uma nova linha
+
+        // 3 colunas
+        for (let j = 0; j < 3; j++) {
+
+            // Número entre 1 e 20
+            let numero = Math.floor(Math.random() * 20) + 1;
+
+            linha.push(numero); // Coloca na linha
         }
-    
-        res.innerHTML += `${matriz}` // Retorna a matriz final com 3 linhas e 3 colunas
+
+        matriz.push(linha); // Coloca a linha na matriz
     }
+
+    for (let i = 0; i < matriz.length; i++) {
+    let linhaTxt = "";
+
+    for (let j = 0; j < matriz[i].length; j++) {
+        linhaTxt += matriz[i][j] + " ";   // monta a linha manualmente
+    }
+
+    res.innerHTML += `<strong>${linhaTxt}</strong><br>`;
+}
+}
     
 
     function geraesoma(){

@@ -21,9 +21,9 @@ res.innerHTML = ""
             console.log(numeros)
             if (pos !== -1) {
                 res.innerHTML += "Valor encontrado na posição: " + pos;
-                res.style.color += "green";
+                
             } else {
                 res.innerHTML += "Valor não encontrado!";
-                res.style.color += "red";
+                
             }
 }
